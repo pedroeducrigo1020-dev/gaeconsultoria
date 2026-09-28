@@ -90,3 +90,19 @@ que só essa folha definia. Resultado: página crua, com texto claro sobre fundo
   `EMAIL_DESTINO` no final do arquivo) — **troque pelo e-mail real**.
 - Se você tiver o `styles.css` original em algum lugar, ele pode substituir o novo;
   os nomes de classe usados nas páginas estão todos documentados no cabeçalho do arquivo.
+
+## Modo escuro
+
+Paleta: **Kombu Green** `#354024` (superfícies/cards) · **Moss Green** `#889063`
+(destaques) · **Tan** `#CFBB99` (texto secundário, botões) · **Bone** `#E5D7C4`
+(texto principal). O fundo da página é um tom mais escuro do Kombu (`#1E2719`).
+
+- **Onde fica:** `assets/styles.css` (seções 8 e 9) e o final de `assets/hub.css`.
+  Tudo é ativado por `<html data-theme="dark">`; o tema claro não foi alterado.
+- **Como decide o tema:** um script inline no `<head>` de todas as páginas lê a
+  escolha salva (`localStorage`, chave `ethos-tema`) ou, sem escolha, segue o tema do
+  sistema (`prefers-color-scheme`). Isso evita o "flash" de tema claro ao carregar.
+- **Botão de alternar:** ícone de lua/sol no header (`app.js`), com `aria-pressed`,
+  e também visível no mobile ao lado do menu.
+- **Ajustar cores:** edite os tokens em `:root[data-theme="dark"]` (início da seção 8).
+- **Nota:** `#E5D7C` foi enviado com 5 dígitos; assumi `#E5D7C4`, que já era o Bone do projeto.
