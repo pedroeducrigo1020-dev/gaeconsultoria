@@ -54,6 +54,42 @@
   const ICO_MENU = '<svg class="ico-abrir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>' +
     '<svg class="ico-fechar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 
+  const ICO_TEMA = '<svg class="ico-lua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>' +
+    '<svg class="ico-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+
+  /* ------------------------------------------------------------
+     Tema claro/escuro
+     O <html data-theme> inicial é definido por um script inline no
+     <head> (evita flash). Aqui ficam a alternância e a persistência.
+     Sem escolha salva, o site acompanha o tema do sistema.
+     ------------------------------------------------------------ */
+  const CHAVE_TEMA = 'ethos-tema';
+  const mqEscuro = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+  function temaAtual() {
+    return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+  }
+  function aplicarTema(tema) {
+    document.documentElement.dataset.theme = tema;
+    const ehEscuro = tema === 'dark';
+    document.querySelectorAll('.tema-toggle').forEach(b => {
+      b.setAttribute('aria-pressed', String(ehEscuro));
+      b.setAttribute('aria-label', ehEscuro ? 'Ativar modo claro' : 'Ativar modo escuro');
+      b.title = ehEscuro ? 'Modo claro' : 'Modo escuro';
+    });
+  }
+  function salvarTema(tema) {
+    try { localStorage.setItem(CHAVE_TEMA, tema); } catch (e) { /* modo privado */ }
+  }
+  function temaSalvo() {
+    try { return localStorage.getItem(CHAVE_TEMA); } catch (e) { return null; }
+  }
+  if (mqEscuro && mqEscuro.addEventListener) {
+    mqEscuro.addEventListener('change', e => {
+      if (!temaSalvo()) aplicarTema(e.matches ? 'dark' : 'light');
+    });
+  }
+
   function paginaAtual() {
     const arq = location.pathname.split('/').pop();
     return arq || 'index.html';
@@ -71,7 +107,6 @@
       '<header class="site-header">' +
         '<div class="site-header__inner">' +
           '<a class="logo" href="index.html" aria-label="Ethos e Terra — início">' + ICO_LOGO + '<span>Ethos e Terra</span></a>' +
-          '<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menu">' + ICO_MENU + '</button>' +
           '<nav class="nav" id="nav-principal" aria-label="Principal">' +
             '<a class="nav__link" href="index.html"' + cur('index.html') + '>Início</a>' +
             '<a class="nav__link" href="gestao-ambiental.html"' + cur('gestao-ambiental.html') + '>Gestão Ambiental</a>' +
@@ -85,6 +120,10 @@
             '<a class="nav__link" href="metodo.html"' + cur('metodo.html') + '>Método</a>' +
             '<a class="btn btn--primario" href="contato.html">Solicitar diagnóstico</a>' +
           '</nav>' +
+          '<div class="site-header__acoes">' +
+            '<button class="tema-toggle" type="button" aria-pressed="false" aria-label="Ativar modo escuro">' + ICO_TEMA + '</button>' +
+            '<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menu">' + ICO_MENU + '</button>' +
+          '</div>' +
         '</div>' +
       '</header>';
     alvo.dataset.rendered = '1';
@@ -97,6 +136,13 @@
       toggle.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
     };
     toggle.addEventListener('click', () => setAberto(!header.classList.contains('nav-aberto')));
+    const btnTema = alvo.querySelector('.tema-toggle');
+    aplicarTema(temaAtual());
+    btnTema.addEventListener('click', () => {
+      const novo = temaAtual() === 'dark' ? 'light' : 'dark';
+      aplicarTema(novo);
+      salvarTema(novo);
+    });
     header.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => setAberto(false)));
     document.addEventListener('keydown', e => { if (e.key === 'Escape') setAberto(false); });
   }

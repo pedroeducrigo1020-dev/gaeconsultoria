@@ -106,3 +106,10 @@ Paleta: **Kombu Green** `#354024` (superfícies/cards) · **Moss Green** `#88906
   e também visível no mobile ao lado do menu.
 - **Ajustar cores:** edite os tokens em `:root[data-theme="dark"]` (início da seção 8).
 - **Nota:** `#E5D7C` foi enviado com 5 dígitos; assumi `#E5D7C4`, que já era o Bone do projeto.
+
+## Correção aplicada ao modo escuro
+
+As páginas carregam `assets/styles.css`, `assets/hub.css` e `assets/app.js`, mas o modo
+escuro estava só nas cópias soltas na raiz do projeto (`styles.css`, `hub.css`, `app.js`).
+Essas versões foram copiadas para `assets/` e os arquivos duplicados da raiz
+(`styles (1).css`, `hub (3).css`, `app (4).js`, `subpages (2).js` etc.) foram removidos.

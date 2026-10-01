@@ -136,3 +136,17 @@
 .card-servico:hover h3{color:#fff}
 .card-servico:hover p{color:rgba(229,215,196,.72)}
 .card-servico:hover .card__link{color:var(--moss-soft);gap:14px}
+
+/* ------------------------------------------------------------
+   MODO ESCURO — cards de pilar e de serviço
+   (tokens definidos em styles.css, seção 8)
+   ------------------------------------------------------------ */
+[data-theme="dark"] .pilar-card:hover,
+[data-theme="dark"] .card-servico:hover{border-color:rgba(136,144,99,.55)}
+[data-theme="dark"] .pilar-card__link,
+[data-theme="dark"] .card__link{color:var(--moss-soft)}
+[data-theme="dark"] .pilar-card:hover .pilar-card__link,
+[data-theme="dark"] .card-servico:hover .card__link{color:var(--tan)}
+[data-theme="dark"] .pilar-card::before{
+  background:linear-gradient(155deg,#2B3520,var(--kombu-deep));
+}
