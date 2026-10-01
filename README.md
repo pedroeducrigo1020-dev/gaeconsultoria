@@ -22,9 +22,9 @@ recrutamento.html, clima-psicossocial.html, treinamento-lideranca.html (sub-sub,
 infraestrutura.html, seguranca-informacao.html, lgpd-dados.html     (sub-sub, TI)
 
 assets/
-├── styles.css    (ÚNICO CSS: base + cards de pilar/serviço + modo escuro)
-├── app.js        (header/footer, tema, reveal, FAQ, contadores)
-└── subpages.js   (conteúdo das 18 sub-páginas)
+├── hub.css       (corrigido + ampliado)
+├── app.js        (corrigido)
+└── subpages.js   (corrigido)
 ```
 
 Somente `nr-35.html`, `seguranca-trabalho.html` e `gestao-ambiental.html`
@@ -74,7 +74,7 @@ que só essa folha definia. Resultado: página crua, com texto claro sobre fundo
 - **`assets/styles.css` (novo)** — tokens de cor/tipografia, reset, layout
   (`.container`, `.secao`, `.grid`), hero, breadcrumbs, `.prose`, `.card`, botões,
   FAQ, timeline, CTA, header, footer, formulário, animação de entrada e
-  `prefers-reduced-motion`. Agora também contém os estilos que ficavam em `hub.css`.
+  `prefers-reduced-motion`. Deve carregar **antes** do `hub.css`.
 - **Header e footer** — `app.js` agora preenche `#site-header` / `#site-footer`
   (menu com dropdown de pilares, menu mobile, item ativo, "pular para o conteúdo").
 - **`metodo.html` e `contato.html` (novos)** — eram linkados em todo CTA e davam 404.
@@ -97,7 +97,7 @@ Paleta: **Kombu Green** `#354024` (superfícies/cards) · **Moss Green** `#88906
 (destaques) · **Tan** `#CFBB99` (texto secundário, botões) · **Bone** `#E5D7C4`
 (texto principal). O fundo da página é um tom mais escuro do Kombu (`#1E2719`).
 
-- **Onde fica:** `assets/styles.css` (seções 8 e 9, mais o bloco final dos cards).
+- **Onde fica:** `assets/styles.css` (seções 8 e 9) e o final de `assets/hub.css`.
   Tudo é ativado por `<html data-theme="dark">`; o tema claro não foi alterado.
 - **Como decide o tema:** um script inline no `<head>` de todas as páginas lê a
   escolha salva (`localStorage`, chave `ethos-tema`) ou, sem escolha, segue o tema do
@@ -107,10 +107,9 @@ Paleta: **Kombu Green** `#354024` (superfícies/cards) · **Moss Green** `#88906
 - **Ajustar cores:** edite os tokens em `:root[data-theme="dark"]` (início da seção 8).
 - **Nota:** `#E5D7C` foi enviado com 5 dígitos; assumi `#E5D7C4`, que já era o Bone do projeto.
 
-## Arquivos unificados
+## Correção aplicada ao modo escuro
 
-Antes o projeto tinha cópias idênticas de `app.js`, `styles.css`, `hub.css` e
-`subpages.js` na raiz **e** em `assets/` (as páginas só usavam as de `assets/`).
-As cópias da raiz foram removidas e `hub.css` foi incorporado ao `styles.css`:
-cada página carrega agora só `assets/styles.css` + `assets/app.js`
-(+ `assets/subpages.js` nas sub-páginas).
+As páginas carregam `assets/styles.css`, `assets/hub.css` e `assets/app.js`, mas o modo
+escuro estava só nas cópias soltas na raiz do projeto (`styles.css`, `hub.css`, `app.js`).
+Essas versões foram copiadas para `assets/` e os arquivos duplicados da raiz
+(`styles (1).css`, `hub (3).css`, `app (4).js`, `subpages (2).js` etc.) foram removidos.
