@@ -113,3 +113,23 @@ As páginas carregam `assets/styles.css`, `assets/hub.css` e `assets/app.js`, ma
 escuro estava só nas cópias soltas na raiz do projeto (`styles.css`, `hub.css`, `app.js`).
 Essas versões foram copiadas para `assets/` e os arquivos duplicados da raiz
 (`styles (1).css`, `hub (3).css`, `app (4).js`, `subpages (2).js` etc.) foram removidos.
+
+## Atualização de conteúdo (RH, Marketing e Qualidade)
+
+- Removidas as cópias duplicadas da raiz (`app.js`, `subpages.js`, `styles.css`, `hub.css`), que eram idênticas às de `assets/`.
+- `rh.html`, `marketing.html` e `qualidade.html` e suas 3 sub-páginas cada foram reescritos com o conteúdo dos slides (os nomes dos arquivos foram mantidos para não quebrar links/menu):
+  - RH: `recrutamento` (etapa 2), `clima-psicossocial` (etapas 1 e 5), `treinamento-lideranca` (etapas 3 e 4).
+  - Marketing: `branding-esg` (etapas da gestão), `marketing-digital` (plano de marketing), `comunicacao-interna` (KPIs e tendências).
+  - Qualidade: `iso-9001` (ISO 9001 + TQM), `iso-14001` (ISO 14001 + SGA), `auditorias` (PDCA, 5S, Ishikawa, Kaizen).
+- A frase sobre Segurança do Trabalho foi movida para `seguranca-trabalho.html`.
+
+## Matriz de riscos e conteúdo de Qualidade (imagens)
+
+- `gestao-ambiental.html`: nova seção "Riscos e perigos ambientais" (matriz com 5 riscos, probabilidade, severidade, nível e legenda). Estilos no final de `assets/hub.css`.
+- `qualidade.html`: seção "Atuação da consultoria" e lema da qualidade.
+- `iso-9001`, `iso-14001` e `auditorias` (ferramentas): detalhes de PDCA (com exemplo), 5S, Ishikawa, Kaizen e das normas.
+- As duas infografias de Qualidade estão em `assets/img/` e aparecem em `qualidade.html` na seção "Qualidade em duas páginas".
+
+## Logo
+
+Nova logo (folhas em círculo) em `assets/img/`: `logo-claro.png` (tema claro), `logo-escuro.png` (tema escuro e rodapé) e `favicon.png`, todas com fundo transparente e cores da paleta (Kombu/Bone/Moss). O header e o rodapé trocam a versão conforme o tema (`assets/styles.css`, classe `.logo__img`).

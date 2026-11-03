@@ -113,94 +113,153 @@ const SUBPAGES = {
   'branding-esg': {
     categoria: 'Marketing',
     catHref: 'marketing.html',
-    titulo: 'Branding <em>ESG</em>',
-    lead: 'Sua marca comunica o que sua empresa realmente faz. Se a atuação ambiental e social é séria, a narrativa precisa estar à altura — sem greenwashing.',
+    titulo: 'Etapas da <em>Gestão de Marketing</em>',
+    lead: 'Para funcionar de forma eficiente, a gestão de marketing segue um ciclo contínuo: pesquisa, estratégia, plano, execução e mensuração.',
     meta: [
-      { valor: '0', rot: 'Tolerância a greenwashing' },
-      { valor: '360°', rot: 'Visão de marca' },
-      { valor: 'ESG', rot: 'Framework aplicado' }
+      { valor: '5', rot: 'Etapas do ciclo' },
+      { valor: 'STP', rot: 'Segmentação, Target e Posicionamento' },
+      { valor: 'A/B', rot: 'Testes para melhorar o ROI' }
     ],
     conteudo: `
-      <h3>O que é branding ESG</h3>
-      <p>É a construção da identidade de marca ancorada em práticas ambientais, sociais e de governança <strong>reais</strong>. Não é maquiagem — é traduzir o que a empresa faz em narrativa consistente para clientes, investidores e talentos.</p>
-      <h3>Como construímos</h3>
+      <h3>1. Pesquisa e análise de mercado</h3>
       <ul>
-        <li>Auditoria de comunicação atual (o que é real, o que é exagero)</li>
-        <li>Definição de propósito e posicionamento ESG</li>
-        <li>Arquitetura de marca (identidade verbal e visual)</li>
-        <li>Mensagens-chave para cada stakeholder</li>
-        <li>Relatório ESG e material institucional</li>
-        <li>Diretrizes de comunicação para evitar greenwashing</li>
+        <li>Mapeamento do comportamento do consumidor, concorrentes e tendências do setor.</li>
+        <li>Análise de pontos fortes, fracos, oportunidades e ameaças (Matriz SWOT/FOFA).</li>
       </ul>
-      <h3>O que evitamos</h3>
-      <p>Não aceitamos projetos que pedem para comunicar algo que a empresa não pratica. Se a atuação real não sustenta a narrativa, nosso primeiro passo é ajustar a operação — depois a comunicação.</p>
+      <h3>2. Estratégia (Segmentação, Target e Posicionamento — STP)</h3>
+      <ul>
+        <li><strong>Segmentação:</strong> divisão do mercado em grupos com necessidades semelhantes.</li>
+        <li><strong>Target (público-alvo/persona):</strong> escolha de qual segmento específico a empresa vai focar.</li>
+        <li><strong>Posicionamento:</strong> como a marca quer ser lembrada na mente do cliente em relação aos concorrentes.</li>
+      </ul>
+      <h3>3. Elaboração do plano de marketing</h3>
+      <ul>
+        <li>Definição de metas claras (por exemplo, aumentar as vendas em 25% no semestre ou reduzir o custo de aquisição de clientes).</li>
+        <li>Escolha das estratégias e táticas (Inbound Marketing, Outbound, Marketing de Conteúdo, SEO, Tráfego Pago etc.).</li>
+        <li>Alocação de orçamento e cronograma de ações.</li>
+      </ul>
+      <h3>4. Execução operacional</h3>
+      <ul>
+        <li>Produção de campanhas, peças publicitárias, eventos, landing pages, e-mails e materiais de vendas.</li>
+        <li>Alinhamento direto com a equipe comercial/vendas para garantir o aproveitamento dos leads gerados.</li>
+      </ul>
+      <h3>5. Mensuração e otimização</h3>
+      <ul>
+        <li>Acompanhamento contínuo dos indicadores de desempenho (KPIs).</li>
+        <li>Reajuste de estratégias e realização de testes A/B para melhorar o retorno sobre o investimento (ROI).</li>
+      </ul>
     `,
     faq: [
-      { p: 'O que é greenwashing e por que é um risco?', r: 'É comunicar benefícios ambientais que não existem na prática. Além do dano reputacional, é crime em vários países e pode gerar sanções e perda de contratos.' },
-      { p: 'Minha empresa é pequena. Vale a pena investir em branding ESG?', r: 'Sim, desde que haja ações reais. Consumidores e grandes empresas valorizam fornecedores com práticas sustentáveis comprovadas.' },
-      { p: 'Como começamos?', r: 'Fazemos uma auditoria de comunicação e um levantamento das práticas reais. A partir daí, desenhamos o posicionamento adequado ao porte e maturidade da empresa.' }
+      { p: 'O que é a Matriz SWOT/FOFA?', r: 'É a análise de pontos fortes, fracos, oportunidades e ameaças, feita na etapa de pesquisa e análise de mercado.' },
+      { p: 'O que significa STP?', r: 'Segmentação, Target e Posicionamento: dividir o mercado em grupos, escolher o segmento em que a empresa vai focar e definir como a marca quer ser lembrada em relação aos concorrentes.' },
+      { p: 'Para que servem os testes A/B?', r: 'Para reajustar estratégias na etapa de mensuração e otimização e melhorar o retorno sobre o investimento (ROI).' }
     ]
   },
 
   'marketing-digital': {
     categoria: 'Marketing',
     catHref: 'marketing.html',
-    titulo: 'Marketing <em>Digital</em>',
-    lead: 'Conteúdo relevante, redes sociais com propósito e performance mensurável. Transformamos a atuação ESG em presença digital que gera negócio.',
+    titulo: 'Plano de <em>Marketing</em>',
+    lead: 'Elaborar um plano de marketing estruturado é o que transforma o marketing de um custo incerto em um motor previsível de vendas. O roteiro vai do diagnóstico à mensuração dos resultados.',
     meta: [
-      { valor: '360°', rot: 'Canais cobertos' },
-      { valor: 'ROI', rot: 'Foco em resultado' },
-      { valor: '4', rot: 'Etapas de funil' }
+      { valor: '7', rot: 'Passos do plano' },
+      { valor: 'SMART', rot: 'Metas específicas e mensuráveis' },
+      { valor: '4', rot: 'Canais na tabela de alocação' }
     ],
     conteudo: `
-      <h3>O que fazemos</h3>
+      <h3>Diagnóstico e definição</h3>
+      <p><strong>1. Diagnóstico de mercado e análise SWOT — onde a empresa está hoje?</strong></p>
       <ul>
-        <li>Estratégia de conteúdo e calendário editorial</li>
-        <li>Gestão de redes sociais (LinkedIn, Instagram, YouTube)</li>
-        <li>Produção de conteúdo técnico e institucional</li>
-        <li>SEO e blog corporativo</li>
-        <li>E-mail marketing e automação</li>
-        <li>Análise de métricas e otimização contínua</li>
+        <li><strong>Análise interna:</strong> liste forças (atendimento ágil, produto exclusivo) e fraquezas (marca pouco conhecida, site desatualizado).</li>
+        <li><strong>Análise externa:</strong> liste oportunidades do mercado (crescimento de um novo nicho) e ameaças (entrada de concorrentes com preços mais baixos).</li>
+        <li><strong>Mapeamento de concorrentes:</strong> identifique os três principais concorrentes diretos, analisando o que fazem bem e onde deixam a desejar.</li>
       </ul>
-      <h3>Diferencial ESG</h3>
-      <p>Não fazemos marketing digital genérico. Todo conteúdo é ancorado em dados reais da operação do cliente — indicadores ambientais, ações sociais, certificações obtidas. Isso gera autoridade genuína e diferencia a marca no mercado.</p>
+      <p><strong>2. Definição de público-alvo e persona — com quem a empresa vai falar?</strong> Evite tentar falar com “todo mundo”.</p>
+      <ul>
+        <li><strong>Perfil demográfico:</strong> idade, gênero, localização, cargo ou faixa de renda.</li>
+        <li><strong>Dores e necessidades:</strong> qual problema urgente essa pessoa tem que o produto ou serviço resolve?</li>
+        <li><strong>Comportamento de compra:</strong> onde ela busca informação (Instagram, Google, LinkedIn, indicação de amigos)?</li>
+        <li><strong>Interesses:</strong> assuntos e atividades que despertam o interesse desse consumidor.</li>
+        <li><strong>Hábitos de consumo:</strong> como, quando e onde essa pessoa costuma comprar.</li>
+        <li><strong>Motivações de compra:</strong> fatores que influenciam a decisão de adquirir um produto ou serviço.</li>
+      </ul>
+      <p><strong>3. Posicionamento e Proposta Única de Valor (PUV) — como a empresa quer ser vista?</strong> Defina claramente o diferencial competitivo.</p>
+      <ul>
+        <li>Responda: “Por que o cliente deve escolher a sua empresa e não o concorrente?”</li>
+        <li>Defina o tom de voz da marca (formal, descontraído, educacional, especialista) e a oferta central.</li>
+      </ul>
+      <p><strong>4. Objetivos e metas SMART — onde a empresa quer chegar?</strong> As metas devem ser específicas, mensuráveis, atingíveis, relevantes e temporais.</p>
+      <ul>
+        <li><strong>Exemplo ruim:</strong> “Quero vender mais no Instagram.”</li>
+        <li><strong>Exemplo SMART:</strong> “Aumentar a geração de leads qualificados em 35% nos próximos 6 meses através do site e tráfego pago.”</li>
+      </ul>
+      <p><strong>5. Estratégias de comunicação e canais — quais canais e táticas utilizar?</strong> Escolha canais alinhados a onde a persona costuma estar.</p>
+      <ul>
+        <li><strong>Inbound Marketing / Conteúdo:</strong> blog posts, e-books, vídeos educativos e redes sociais para atrair clientes organicamente.</li>
+        <li><strong>Mídia paga (tráfego pago):</strong> Google Ads (para captar quem já busca pelo produto) e Meta Ads (Instagram e Facebook), para aumentar o reconhecimento da marca, atrair clientes e gerar conversões.</li>
+        <li><strong>Outbound / vendas diretas:</strong> prospecção ativa via e-mail ou telefone (comum em negócios B2B).</li>
+        <li><strong>Marketing de relacionamento:</strong> automação de e-mail marketing, réguas de relacionamento via WhatsApp e programas de fidelidade, respeitando a autorização dos clientes.</li>
+      </ul>
+      <h3>Planejamento, execução e resultados</h3>
+      <p><strong>6. Orçamento, cronograma e responsáveis — quanto vai custar e quem faz o quê?</strong></p>
+      <ul>
+        <li><strong>Orçamento (budget):</strong> qual o investimento mensal ou anual disponível para anúncios, ferramentas, equipe e agências?</li>
+        <li><strong>Cronograma de ações:</strong> calendário com prazos para o lançamento de campanhas e a produção de conteúdo.</li>
+        <li><strong>Matriz de responsabilidade:</strong> quem executará cada tarefa (equipe interna, consultor ou agência terceirizada)?</li>
+      </ul>
+      <p><strong>7. KPIs e ciclo de otimização — como saber se está funcionando?</strong> Determine as métricas acompanhadas semanal ou mensalmente.</p>
+      <ul>
+        <li><strong>Atração:</strong> visitantes no site, alcance nas redes sociais e taxa de cliques (CTR).</li>
+        <li><strong>Conversão:</strong> número de leads gerados e custo por lead (CPL).</li>
+        <li><strong>Negócio:</strong> CAC, ROI e faturamento gerado pelo marketing.</li>
+        <li><strong>Retenção:</strong> percentual de clientes que continuam utilizando os produtos ou serviços durante determinado período.</li>
+      </ul>
+      <h3>Resumo: tabela de alocação de canais</h3>
+      <ul>
+        <li><strong>Google Ads:</strong> capturar demanda pronta (fundo de funil), com anúncios de pesquisa para palavras-chave com intenção de compra. Frequência: contínuo.</li>
+        <li><strong>Instagram / TikTok:</strong> gerar autoridade e atrair novos públicos, com vídeos curtos (Reels), bastidores e caixas de perguntas nos Stories. Frequência: 3 a 5 vezes por semana.</li>
+        <li><strong>E-mail / WhatsApp:</strong> nutrir o relacionamento e converter em reuniões/vendas, com sequências automáticas de boas-vindas e ofertas para clientes cadastrados, mediante autorização. Frequência: semanal.</li>
+        <li><strong>Site / Blog:</strong> posicionamento orgânico (SEO) no Google, com artigos educativos que tiram as dúvidas mais comuns dos clientes. Frequência: quinzenal.</li>
+      </ul>
     `,
     faq: [
-      { p: 'Vocês produzem o conteúdo ou só planejam?', r: 'Fazemos os dois. Podemos atuar apenas no planejamento estratégico ou assumir a produção completa, incluindo redação, design e publicação.' },
-      { p: 'Em quanto tempo vejo resultado?', r: 'Primeiros sinais de engajamento em 30-60 dias. Resultados de negócio (leads, vendas) costumam aparecer entre 90 e 180 dias.' },
-      { p: 'Preciso ter perfil em todas as redes?', r: 'Não. Recomendamos escolher 2 a 3 canais onde seu público realmente está, e fazer bem feito, em vez de estar em todos superficialmente.' }
+      { p: 'O que é uma meta SMART?', r: 'Uma meta específica, mensurável, atingível, relevante e temporal. Exemplo: aumentar a geração de leads qualificados em 35% nos próximos 6 meses através do site e tráfego pago.' },
+      { p: 'O que é uma persona?', r: 'É a representação do cliente ideal: perfil demográfico, dores e necessidades, comportamento de compra, interesses, hábitos de consumo e motivações de compra.' },
+      { p: 'Qual a diferença entre Google Ads e Meta Ads?', r: 'O Google Ads capta quem já busca pelo produto; o Meta Ads (Instagram e Facebook) é usado para aumentar o reconhecimento da marca, atrair clientes e gerar conversões.' },
+      { p: 'Com que frequência cada canal é trabalhado?', r: 'Google Ads é contínuo; Instagram/TikTok, de 3 a 5 vezes por semana; e-mail/WhatsApp, semanal; site/blog, quinzenal.' }
     ]
   },
 
   'comunicacao-interna': {
     categoria: 'Marketing',
     catHref: 'marketing.html',
-    titulo: 'Comunicação <em>Interna</em>',
-    lead: 'A marca começa dentro de casa. Comunicação interna consistente alinha times, engaja colaboradores e reduz turnover.',
+    titulo: 'KPIs e <em>Tendências</em>',
+    lead: 'Uma gestão de marketing orientada a dados (data-driven) acompanha métricas de desempenho e se mantém atenta às tendências do setor.',
     meta: [
-      { valor: '+45%', rot: 'Engajamento médio' },
-      { valor: '2×', rot: 'Mais retenção' },
-      { valor: '1', rot: 'Narrativa única' }
+      { valor: '5', rot: 'Indicadores principais' },
+      { valor: '3', rot: 'Tendências atuais' },
+      { valor: 'Data-driven', rot: 'Gestão orientada a dados' }
     ],
     conteudo: `
-      <h3>Por que importa</h3>
-      <p>Quando a comunicação interna é fraca, o colaborador não entende o propósito da empresa, não se sente parte e adoece. Comunicação clara é um dos fatores mais correlacionados com engajamento e retenção.</p>
-      <h3>O que entregamos</h3>
+      <h3>Principais indicadores de desempenho (KPIs)</h3>
       <ul>
-        <li>Diagnóstico de canais e ruídos de comunicação</li>
-        <li>Plano de comunicação interna</li>
-        <li>Newsletter corporativa e comunicados</li>
-        <li>Campanhas internas (segurança, ESG, diversidade)</li>
-        <li>Rituais de integração e onboarding comunicacional</li>
-        <li>Métricas de alcance e engajamento interno</li>
+        <li><strong>CAC (Custo de Aquisição de Cliente):</strong> valor médio que a empresa investe em marketing e vendas para conquistar cada novo cliente.</li>
+        <li><strong>LTV (Lifetime Value):</strong> valor total que um cliente gera para a empresa durante todo o período de relacionamento com a marca.</li>
+        <li><strong>ROI (Retorno sobre o Investimento):</strong> indicador que mede o retorno financeiro em relação ao que foi investido.</li>
+        <li><strong>Taxa de conversão:</strong> porcentagem de visitantes ou leads que realizam a ação desejada (por exemplo, preencher um formulário ou comprar um produto).</li>
+        <li><strong>NPS (Net Promoter Score):</strong> mede a disposição dos clientes em recomendar uma empresa, produto ou serviço a outras pessoas.</li>
       </ul>
-      <h3>Como se conecta ao ESG</h3>
-      <p>Metas ambientais e sociais só funcionam quando o colaborador sabe o que a empresa está fazendo e por quê. Comunicação interna é a ponte entre a estratégia ESG e a execução no dia a dia.</p>
+      <h3>Tendências atuais na gestão de marketing</h3>
+      <ul>
+        <li><strong>Marketing de Conteúdo e Inbound:</strong> atrair potenciais clientes criando conteúdo relevante e educativo, em vez de apenas “empurrar” anúncios.</li>
+        <li><strong>Uso de Inteligência Artificial:</strong> personalização de ofertas em massa, automação de e-mails, análise preditiva e criação assistida de conteúdo.</li>
+        <li><strong>Omnichannel:</strong> integração fluida entre todos os canais de contato do cliente (loja física, WhatsApp, e-commerce e redes sociais).</li>
+      </ul>
     `,
     faq: [
-      { p: 'Como medir comunicação interna?', r: 'Pesquisa de clima, taxa de abertura de comunicados, participação em campanhas e NPS interno são os principais indicadores.' },
-      { p: 'Vale para empresa com 30 colaboradores?', r: 'Sim. Em empresas pequenas, a comunicação informal pode gerar ruídos ainda maiores. Estruturar canais ajuda a todos.' },
-      { p: 'Como se relaciona com o RH?', r: 'É uma frente conjunta. Trabalhamos comunicação interna em parceria com o pilar de RH, garantindo alinhamento de mensagem e cultura.' }
+      { p: 'O que o CAC mede?', r: 'O valor médio que a empresa investe em marketing e vendas para conquistar cada novo cliente.' },
+      { p: 'Qual a diferença entre ROI e LTV?', r: 'O ROI mede o retorno financeiro em relação ao que foi investido; o LTV mede o valor total que um cliente gera durante todo o relacionamento com a marca.' },
+      { p: 'O que é omnichannel?', r: 'É a integração fluida entre todos os canais de contato do cliente: loja física, WhatsApp, e-commerce e redes sociais.' }
     ]
   },
 
@@ -208,96 +267,116 @@ const SUBPAGES = {
   'iso-9001': {
     categoria: 'Qualidade',
     catHref: 'qualidade.html',
-    titulo: 'ISO <em>9001</em>',
-    lead: 'A norma de gestão da qualidade mais reconhecida do mundo. Estruturamos processos, padronizamos rotinas e preparamos sua empresa para a certificação.',
+    titulo: 'ISO <em>9001</em> e GQT / TQM',
+    lead: 'Gestão da qualidade para padronizar processos, reduzir erros e desperdícios e aumentar a satisfação dos clientes e a competitividade da empresa.',
     meta: [
-      { valor: '6-12', rot: 'Meses até certificar' },
-      { valor: '+60', rot: 'Implantações feitas' },
-      { valor: '100%', rot: 'Documentação auditável' }
+      { valor: 'ISO 9001', rot: 'Gestão da qualidade' },
+      { valor: 'TQM', rot: 'Todos os setores envolvidos' },
+      { valor: 'Cliente', rot: 'Foco na satisfação' }
     ],
     conteudo: `
-      <h3>O que a ISO 9001 exige</h3>
-      <p>Um sistema de gestão da qualidade baseado em sete princípios: foco no cliente, liderança, engajamento das pessoas, abordagem por processos, melhoria contínua, tomada de decisão baseada em evidências e gestão de relacionamentos.</p>
-      <h3>Nossa abordagem</h3>
+      <h3>GQT / TQM (Gestão da Qualidade Total)</h3>
       <ul>
-        <li>Diagnóstico de maturidade e gap analysis</li>
-        <li>Mapeamento e padronização de processos</li>
-        <li>Elaboração de documentação (manual, procedimentos, instruções)</li>
-        <li>Treinamento de equipes e formação de auditores internos</li>
-        <li>Auditoria interna simulada antes da certificação</li>
-        <li>Acompanhamento da auditoria de certificação</li>
+        <li>Envolve todos os setores da empresa na busca pela qualidade e na eliminação de falhas.</li>
+        <li>Tem foco no cliente, na melhoria contínua e no trabalho em equipe.</li>
+        <li>Gera mais eficiência, reduz custos e aumenta a satisfação dos clientes.</li>
       </ul>
-      <h3>Diferencial</h3>
-      <p>Não entregamos documentação genérica. Cada procedimento é construído com a equipe que o executa, garantindo que seja aplicável e sustentável no dia a dia — não apenas durante auditorias.</p>
+      <p><em>Qualidade é responsabilidade de todos!</em></p>
+      <h3>ISO 9001 — Gestão da Qualidade</h3>
+      <ul>
+        <li>Norma internacional para o Sistema de Gestão da Qualidade (SGQ).</li>
+        <li>Ajuda a padronizar processos, reduzir falhas e melhorar os serviços.</li>
+        <li>Aumenta a satisfação dos clientes e a competitividade da empresa.</li>
+      </ul>
+      <h3>Atuação da consultoria</h3>
+      <p>Ajudamos na implementação e na certificação da ISO 9001, identificando problemas e oportunidades de melhoria e aplicando as ferramentas da qualidade.</p>
     `,
     faq: [
-      { p: 'Quanto tempo leva para certificar?', r: 'Entre 6 e 12 meses, dependendo do porte, maturidade e escopo da empresa. Empresas já com processos documentados podem certificar mais rápido.' },
-      { p: 'A certificação tem validade?', r: 'Sim, 3 anos. Durante esse período são realizadas auditorias de manutenção anuais. Ao final do ciclo, ocorre uma auditoria de recertificação.' },
-      { p: 'Posso integrar com ISO 14001 e 45001?', r: 'Sim, e é altamente recomendado. Sistemas integrados reduzem custos, retrabalho e carga documental.' }
+      { p: 'O que é GQT / TQM?', r: 'É a Gestão da Qualidade Total, que envolve todos os setores na busca por qualidade e eliminação de falhas.' },
+      { p: 'O que a ISO 9001 ajuda a fazer?', r: 'Padronizar processos, reduzir falhas, melhorar serviços, aumentar a satisfação dos clientes e a competitividade da empresa.' },
+      { p: 'Quais benefícios o TQM traz?', r: 'Maior eficiência, redução de custos e aumento da satisfação dos clientes, com foco no cliente, melhoria contínua e trabalho em equipe.' },
+      { p: 'O que é o SGQ?', r: 'É o Sistema de Gestão da Qualidade, para o qual a ISO 9001 é a norma internacional.' }
     ]
   },
 
   'iso-14001': {
     categoria: 'Qualidade',
     catHref: 'qualidade.html',
-    titulo: 'ISO <em>14001</em>',
-    lead: 'A norma internacional de gestão ambiental. Conecta o sistema de gestão à operação ambiental da empresa, com foco em conformidade e melhoria contínua.',
+    titulo: 'ISO <em>14001</em> e SGA',
+    lead: 'A norma internacional do Sistema de Gestão Ambiental ajuda a controlar impactos ambientais e a cumprir obrigações legais, promovendo o desenvolvimento sustentável.',
     meta: [
-      { valor: 'ISO', rot: 'Padrão internacional' },
-      { valor: '3 anos', rot: 'Ciclo de validade' },
-      { valor: 'PGR', rot: 'Integrado' }
+      { valor: 'ISO 14001', rot: 'Gestão ambiental' },
+      { valor: 'SGA', rot: 'Sistema de Gestão Ambiental' },
+      { valor: '3', rot: 'Recursos: resíduos, água e energia' }
     ],
     conteudo: `
-      <h3>O que a ISO 14001 exige</h3>
-      <p>Um sistema de gestão ambiental que identifica aspectos e impactos ambientais significativos, define controles operacionais, monitora desempenho e garante conformidade legal — tudo com melhoria contínua.</p>
-      <h3>Como implantamos</h3>
+      <h3>ISO 14001 — Gestão Ambiental</h3>
       <ul>
-        <li>Levantamento de aspectos e impactos ambientais</li>
-        <li>Avaliação de conformidade legal (licenças, condicionantes)</li>
-        <li>Definição de objetivos e metas ambientais</li>
-        <li>Controles operacionais documentados</li>
-        <li>Programa de monitoramento e medição</li>
-        <li>Preparação para emergências ambientais</li>
+        <li>Norma internacional para o Sistema de Gestão Ambiental.</li>
+        <li>Ajuda a controlar os impactos ambientais, como resíduos, consumo de água e energia, e o cumprimento de obrigações legais.</li>
+        <li>Contribui para o desenvolvimento sustentável da empresa.</li>
       </ul>
-      <h3>Integração com o núcleo ambiental</h3>
-      <p>A ISO 14001 é a formalização do núcleo de gestão ambiental em um sistema certificável. Se a empresa já tem a base ambiental em ordem, o caminho para a certificação é natural e mais rápido.</p>
+      <h3>SGA — Sistema de Gestão Ambiental</h3>
+      <p>Conjunto de processos que controla os aspectos e impactos ambientais, incluindo resíduos, água, energia, licenças e conformidade legal.</p>
+      <h3>Atuação da consultoria</h3>
+      <p>Orientamos empresas na redução de impactos ambientais e ajudamos na implementação e certificação da ISO 14001.</p>
     `,
     faq: [
-      { p: 'ISO 14001 é obrigatória?', r: 'Não é obrigatória por lei. Mas muitas cadeias de fornecimento, especialmente de grandes empresas, exigem a certificação de seus fornecedores.' },
-      { p: 'Preciso ter licença ambiental para certificar?', r: 'Sim. A conformidade legal é uma exigência da norma. Empresas com pendências precisam regularizá-las antes ou durante a implantação.' },
-      { p: 'Vale para empresas de serviços?', r: 'Sim. Empresas de serviços também geram impactos ambientais (resíduos, energia, deslocamento) que devem ser gerenciados.' }
+      { p: 'O que é a ISO 14001?', r: 'É a norma internacional do Sistema de Gestão Ambiental (SGA), que ajuda a controlar impactos ambientais e cumprir obrigações legais.' },
+      { p: 'O que o SGA controla?', r: 'Aspectos e impactos ambientais, incluindo resíduos, água, energia, licenças e conformidade legal.' },
+      { p: 'Qual o objetivo da ISO 14001?', r: 'Promover o desenvolvimento sustentável, controlando impactos ambientais e cumprindo as obrigações legais.' }
     ]
   },
 
   'auditorias': {
     categoria: 'Qualidade',
     catHref: 'qualidade.html',
-    titulo: '<em>Auditorias</em> Internas',
-    lead: 'Auditorias internas bem feitas são o melhor mecanismo de melhoria contínua. Identificam não conformidades antes que se tornem problemas caros.',
+    titulo: 'Ferramentas da <em>Qualidade</em>',
+    lead: 'PDCA, 5S, Ishikawa e Kaizen: métodos de melhoria contínua e de organização que ajudam a padronizar processos e reduzir erros e desperdícios.',
     meta: [
-      { valor: 'Anual', rot: 'Mínimo recomendado' },
-      { valor: 'PDCA', rot: 'Ciclo aplicado' },
-      { valor: '360°', rot: 'Cobertura' }
+      { valor: '4', rot: 'Ferramentas' },
+      { valor: 'PDCA', rot: 'Ciclo de 4 etapas' },
+      { valor: '5S', rot: '5 sensos' }
     ],
     conteudo: `
-      <h3>Por que auditar</h3>
-      <p>A auditoria interna não é fiscalização — é aprendizado estruturado. Ela revela onde o sistema está funcionando e onde precisa de ajuste, antes que o problema apareça em uma auditoria externa ou em um incidente real.</p>
-      <h3>O que entregamos</h3>
+      <h3>PDCA</h3>
+      <p>Método de melhoria contínua, com 4 etapas:</p>
       <ul>
-        <li>Plano anual de auditorias internas</li>
-        <li>Execução por auditores qualificados</li>
-        <li>Relatórios com não conformidades e observações</li>
-        <li>Registro de ações corretivas e prazos</li>
-        <li>Verificação de eficácia das ações</li>
-        <li>Formação de auditores internos na sua equipe</li>
+        <li><strong>Planejar:</strong> definir o problema, estabelecer metas e planejar ações.</li>
+        <li><strong>Executar:</strong> colocar o plano em prática.</li>
+        <li><strong>Checar:</strong> verificar os resultados e comparar com as metas.</li>
+        <li><strong>Agir:</strong> corrigir falhas e padronizar o que funcionou.</li>
       </ul>
-      <h3>Formação de multiplicadores</h3>
-      <p>Além de auditar, formamos auditores internos na sua equipe. Ao final do projeto, sua empresa tem autonomia para manter o ciclo de auditorias sem depender de consultoria externa.</p>
+      <p><strong>Exemplo:</strong> corrigir erros em relatórios, investigar a causa e criar procedimentos para evitar que se repitam.</p>
+      <h3>5S</h3>
+      <p>Método de organização do ambiente de trabalho, com 5 sensos. Melhora a produtividade e reduz desperdícios.</p>
+      <ul>
+        <li><strong>Seiri (Utilização):</strong> manter apenas o necessário.</li>
+        <li><strong>Seiton (Organização):</strong> organizar os materiais.</li>
+        <li><strong>Seiso (Limpeza):</strong> manter o ambiente limpo.</li>
+        <li><strong>Seiketsu (Padronização):</strong> criar padrões e procedimentos.</li>
+        <li><strong>Shitsuke (Disciplina):</strong> seguir e manter os padrões.</li>
+      </ul>
+      <h3>Ishikawa (Espinha de Peixe)</h3>
+      <ul>
+        <li>Ferramenta para identificar as possíveis causas de um problema.</li>
+        <li>Analisa diferentes categorias (por exemplo: pessoas, processos, materiais, máquinas, métodos e meio ambiente).</li>
+        <li>Ajuda a encontrar a causa raiz, e não apenas os sintomas.</li>
+      </ul>
+      <h3>Kaizen</h3>
+      <ul>
+        <li>Filosofia de melhoria contínua.</li>
+        <li>Incentiva pequenas mudanças constantes nos processos.</li>
+        <li>Envolve toda a equipe e gera grandes resultados ao longo do tempo.</li>
+      </ul>
+      <p><em>Pequenas melhorias geram grandes resultados!</em></p>
     `,
     faq: [
-      { p: 'Auditoria interna pode ser feita por funcionário?', r: 'Sim, desde que o auditor não audite sua própria área. Formamos auditores internos para que isso seja feito com isenção.' },
-      { p: 'Com que frequência auditar?', r: 'Idealmente todas as áreas ao menos uma vez por ano. Áreas críticas ou com histórico de não conformidade devem ser auditadas com mais frequência.' },
-      { p: 'O que fazer com as não conformidades encontradas?', r: 'Cada uma deve gerar uma ação corretiva com responsável, prazo e verificação de eficácia. Acompanhamos todo esse ciclo.' }
+      { p: 'Quais são as etapas do PDCA?', r: 'Planejar (definir problema e metas), Executar (colocar em prática), Checar (verificar resultados) e Agir (corrigir falhas e padronizar).' },
+      { p: 'Quais são os 5 sensos do 5S?', r: 'Seiri (Utilização), Seiton (Organização), Seiso (Limpeza), Seiketsu (Padronização) e Shitsuke (Disciplina).' },
+      { p: 'Para que serve o diagrama de Ishikawa?', r: 'Para identificar a causa raiz de um problema, analisando categorias como pessoas, processos, materiais, máquinas, métodos e meio ambiente.' },
+      { p: 'O que é Kaizen?', r: 'Uma filosofia de melhoria contínua que incentiva pequenas mudanças constantes nos processos, envolvendo toda a equipe para gerar grandes resultados.' },
+      { p: 'Qual um exemplo de uso do PDCA?', r: 'Corrigir erros em relatórios, investigar a causa e criar procedimentos para evitar que se repitam.' }
     ]
   },
 
@@ -403,98 +482,110 @@ const SUBPAGES = {
   'recrutamento': {
     categoria: 'Recursos Humanos',
     catHref: 'rh.html',
-    titulo: '<em>Recrutamento</em> e Seleção',
-    lead: 'Contratar bem é a decisão mais barata. Contratar mal custa até 2× o salário anual do profissional. Estruturamos processos seletivos que reduzem esse risco.',
+    titulo: 'Atração, <em>Recrutamento</em> e Seleção',
+    lead: 'Atrair, avaliar e selecionar os melhores talentos do mercado, alinhados à cultura e às competências exigidas pela empresa cliente, com uma proposta competitiva que atraia e retenha profissionais qualificados.',
     meta: [
-      { valor: '-40%', rot: 'Turnover precoce' },
-      { valor: '3', rot: 'Etapas mínimas' },
-      { valor: 'Fit', rot: 'Cultural + técnico' }
+      { valor: '4', rot: 'Etapas do funil de vagas' },
+      { valor: 'Fit', rot: 'Cultural + técnico' },
+      { valor: 'PDI', rot: 'Próximo passo após a admissão' }
     ],
     conteudo: `
-      <h3>Como estruturamos</h3>
+      <h3>Métodos e etapas de execução</h3>
       <ul>
-        <li>Definição do perfil da vaga (técnico + comportamental)</li>
-        <li>Descrição de cargo e faixa salarial</li>
-        <li>Estratégia de atração (canais, employer branding)</li>
-        <li>Triagem estruturada e testes situacionais</li>
-        <li>Entrevistas por competências</li>
-        <li>Fit cultural e referências</li>
-        <li>Onboarding estruturado (primeiros 90 dias)</li>
+        <li><strong>Alinhamento de perfil:</strong> reunião com a liderança para mapear as competências técnicas (hard skills) e comportamentais (soft skills) necessárias para o cargo.</li>
+        <li><strong>Seleção e estruturação do pacote de benefícios:</strong> pesquisa de mercado, composição do pacote e uso dele como diferencial competitivo (detalhes abaixo).</li>
+        <li><strong>Divulgação estratégica da vaga:</strong> publicação em portais de emprego especializados, redes profissionais (LinkedIn) e parcerias com instituições de ensino e escolas técnicas da região.</li>
+        <li><strong>Triagem e seleção (funil de vagas):</strong> triagem de currículos, entrevista com o RH, testes técnicos e dinâmicas, e entrevista com o gestor.</li>
+        <li><strong>Proposta e admissão:</strong> apresentação da proposta salarial, alinhamento de expectativas e condução do processo burocrático de admissão.</li>
       </ul>
-      <h3>O diferencial</h3>
-      <p>Não contratamos apenas por competência técnica. Avaliamos alinhamento cultural — porque um profissional tecnicamente excelente mas desalinhado com a cultura gera mais dano que benefício.</p>
-      <h3>Integração com Filosofia</h3>
-      <p>O recrutamento precisa estar conectado a missão, visão e valores da empresa. Sem isso, a seleção se torna aleatória e a cultura se fragmenta.</p>
+      <h3>Pacote de benefícios</h3>
+      <ul>
+        <li><strong>Pesquisa de mercado:</strong> análise dos benefícios oferecidos pelo setor para garantir competitividade.</li>
+        <li><strong>Composição do pacote:</strong> benefícios flexíveis e corporativos, como vale-refeição/alimentação, plano de saúde, auxílio-educação, suporte à saúde mental e day off de aniversário. Os benefícios são analisados caso a caso, conforme a vontade da empresa.</li>
+        <li><strong>Diferencial competitivo:</strong> uso do pacote como ferramenta de Employer Branding, fortalecendo a marca da empresa frente ao mercado.</li>
+      </ul>
+      <h3>Funil de vagas</h3>
+      <ul>
+        <li><strong>Triagem de currículos:</strong> filtragem inicial e mapeamento ativo de candidatos.</li>
+        <li><strong>Entrevista (RH):</strong> avaliação do alinhamento entre os valores do candidato e a cultura da empresa.</li>
+        <li><strong>Testes técnicos e dinâmicas:</strong> casos práticos para avaliar a capacidade de resolução de problemas e o trabalho em equipe.</li>
+        <li><strong>Entrevista com o gestor:</strong> apresentação dos finalistas recomendados para a decisão final da liderança.</li>
+      </ul>
+      <h3>Da admissão à integração</h3>
+      <p>Na proposta e admissão, o profissional é preparado para a etapa de Integração e PDI, que dá continuidade ao ciclo de RH.</p>
     `,
     faq: [
-      { p: 'Vocês fazem o recrutamento ou só estruturam?', r: 'Fazemos os dois. Podemos atuar como consultoria (estruturando o processo interno) ou como R&S terceirizado.' },
-      { p: 'O que é onboarding estruturado?', r: 'É um plano de integração dos primeiros 90 dias, com metas, encontros e treinamentos. Reduz drasticamente a saída precoce.' },
-      { p: 'Vale para vagas operacionais?', r: 'Sim, e é onde o turnover costuma ser mais alto. Estruturar reduz custo de reposição e melhora produtividade.' }
+      { p: 'Como é definido o perfil da vaga?', r: 'Em reunião com a liderança, mapeando as competências técnicas (hard skills) e comportamentais (soft skills) necessárias para o cargo.' },
+      { p: 'Quais benefícios podem compor o pacote?', r: 'Vale-refeição/alimentação, plano de saúde, auxílio-educação, suporte à saúde mental e day off de aniversário, entre outros. Os benefícios são analisados para cada caso e conforme a vontade da empresa.' },
+      { p: 'Quais são as etapas do funil de vagas?', r: 'Triagem de currículos, entrevista com o RH, testes técnicos ou dinâmicas e entrevista com o gestor, que decide entre os finalistas recomendados.' },
+      { p: 'Onde as vagas são divulgadas?', r: 'Em portais de emprego especializados, em redes profissionais como o LinkedIn e por meio de parcerias com instituições de ensino e escolas técnicas da região.' }
     ]
   },
 
   'clima-psicossocial': {
     categoria: 'Recursos Humanos',
     catHref: 'rh.html',
-    titulo: 'Clima &amp; <em>Riscos Psicossociais</em>',
-    lead: 'A NR-01 tornou obrigatória a gestão dos riscos psicossociais. Vamos além da conformidade: usamos dados para construir ambientes de trabalho mais saudáveis.',
+    titulo: 'Avaliação do <em>Cenário Atual</em> e Pós-mudanças',
+    lead: 'Entender a situação da empresa e saber os pontos que precisam melhorar. Ao final do ciclo, os mesmos métodos são usados para medir o que mudou.',
     meta: [
-      { valor: 'NR-01', rot: 'Conformidade' },
-      { valor: 'Anual', rot: 'Pesquisa de clima' },
-      { valor: '360°', rot: 'Diagnóstico' }
+      { valor: '9', rot: 'Métodos de avaliação' },
+      { valor: '180° / 360°', rot: 'Avaliações de desempenho' },
+      { valor: 'Passo 1 e 5', rot: 'Mesmas métricas na reavaliação' }
     ],
     conteudo: `
-      <h3>O que são riscos psicossociais</h3>
-      <p>São fatores do trabalho que podem afetar a saúde mental do colaborador: sobrecarga, assédio, isolamento, falta de autonomia, metas abusivas, más relações com liderança. A NR-01 exige que sejam identificados e gerenciados.</p>
-      <h3>Como atuamos</h3>
+      <h3>Objetivo</h3>
+      <p>Entender a situação da empresa e saber os pontos que precisam melhorar.</p>
+      <h3>Métodos</h3>
       <ul>
-        <li>Pesquisa de clima organizacional anônima e estruturada</li>
-        <li>Avaliação de riscos psicossociais (questionários validados)</li>
-        <li>Entrevistas e grupos focais</li>
-        <li>Devolutiva com lideranças e plano de ação</li>
-        <li>Apoio à liderança para mudanças de comportamento</li>
-        <li>Canal de apoio psicológico quando necessário</li>
+        <li><strong>Entrevistas de acompanhamento:</strong> conversar com o funcionário para saber como está sendo a experiência.</li>
+        <li><strong>Feedback do supervisor:</strong> verificar suas dificuldades e oferecer orientações.</li>
+        <li><strong>Avaliação 180°:</strong> o funcionário é avaliado pelo gestor e pode participar da avaliação conjunta.</li>
+        <li><strong>Avaliação 360°:</strong> reúne opiniões de gestores, colegas, subordinados (quando houver) e do próprio funcionário.</li>
+        <li><strong>Avaliação por metas:</strong> verifica se os objetivos estabelecidos foram alcançados.</li>
+        <li><strong>Avaliação por competências:</strong> analisa habilidades como comunicação, organização, liderança e trabalho em equipe.</li>
+        <li><strong>Pesquisa de satisfação:</strong> verifica se os funcionários estão satisfeitos com o ambiente de trabalho.</li>
+        <li><strong>Análise da taxa de turnover:</strong> calcula a frequência com que os funcionários são substituídos.</li>
+        <li><strong>Análise do clima organizacional:</strong> identifica problemas de relacionamento, liderança, motivação e condições de trabalho.</li>
       </ul>
-      <h3>Integração com Segurança</h3>
-      <p>Riscos psicossociais são riscos ocupacionais. Trabalhamos em parceria com o pilar de Segurança do Trabalho para que sejam integrados ao PGR e ao PCMSO de forma consistente.</p>
+      <h3>Avaliação pós-mudanças</h3>
+      <p>Reavaliação do cenário para entender os avanços, os retrocessos e o que continua igual, usando as mesmas métricas do passo 1.</p>
     `,
     faq: [
-      { p: 'Pesquisa de clima é anônima mesmo?', r: 'Sim, sempre. Sem anonimato garantido, as respostas se tornam politicamente corretas e o diagnóstico perde valor.' },
-      { p: 'O que fazer com os resultados?', r: 'Todo diagnóstico gera plano de ação com responsáveis e prazos. Diagnóstico sem ação é pior que não fazer pesquisa.' },
-      { p: 'Qual a diferença entre clima e cultura?', r: 'Clima é a percepção momentânea (estado). Cultura é o padrão profundo e duradouro (traço). Clima oscila, cultura sustenta.' }
+      { p: 'Qual a diferença entre a avaliação 180° e a 360°?', r: 'Na 180°, o funcionário é avaliado pelo gestor e pode participar da avaliação conjunta. Na 360°, reúnem-se também as opiniões de colegas, de subordinados (quando houver) e do próprio funcionário.' },
+      { p: 'O que a análise de clima organizacional identifica?', r: 'Problemas de relacionamento, liderança, motivação e condições de trabalho.' },
+      { p: 'O que é a análise da taxa de turnover?', r: 'É o cálculo da frequência com que os funcionários são substituídos na empresa.' },
+      { p: 'Como é feita a avaliação pós-mudanças?', r: 'Reavalia-se o cenário com as mesmas métricas do passo 1, para entender os avanços, os retrocessos e o que continua igual.' }
     ]
   },
 
   'treinamento-lideranca': {
     categoria: 'Recursos Humanos',
     catHref: 'rh.html',
-    titulo: 'Treinamento de <em>Lideranças</em>',
-    lead: 'Líderes são o principal ponto de alavancagem da cultura. Investir em liderança transforma o ambiente, a retenção e o resultado.',
+    titulo: 'Integração, <em>PDI</em> e Desligamento',
+    lead: 'A integração e o desenvolvimento estão entre as ações mais satisfatórias do RH. Já o desligamento é conduzido com conversa, transparência e apoio ao funcionário.',
     meta: [
-      { valor: '4-6', rot: 'Meses de programa' },
-      { valor: '90%', rot: 'Aplicação prática' },
-      { valor: '+30%', rot: 'Engajamento do time' }
+      { valor: 'PDI', rot: 'Plano individual' },
+      { valor: '2', rot: 'Etapas: integração e desligamento' },
+      { valor: '1:1', rot: 'Reunião antes do desligamento' }
     ],
     conteudo: `
-      <h3>O que desenvolvemos</h3>
-      <ul>
-        <li>Feedback estruturado e conversas difíceis</li>
-        <li>Delegação e desenvolvimento do time</li>
-        <li>Gestão de conflitos e negociação</li>
-        <li>Inteligência emocional e autoconhecimento</li>
-        <li>Liderança e segurança psicológica</li>
-        <li>Gestão de performance e metas</li>
-        <li>Diversidade, equidade e inclusão</li>
-      </ul>
-      <h3>Metodologia</h3>
-      <p>Programas vivenciais, com casos reais da própria empresa, sessões de coaching em grupo e acompanhamento individual. Não é treinamento teórico — é transformação de prática.</p>
-      <h3>Acompanhamento</h3>
-      <p>Após cada módulo, os líderes saem com um plano de aplicação prática. Nas sessões seguintes, revisamos o que funcionou e ajustamos o que não funcionou. Aprendizado real acontece na prática, não na sala.</p>
+      <h3>Integração e acolhimento</h3>
+      <p>A integração e o desenvolvimento estão entre as ações mais satisfatórias do RH. A partir delas vemos o crescimento dos nossos colaboradores.</p>
+      <p>A empresa planeja usar a criação de um PDI para que cada membro da equipe tenha seu próprio desenvolvimento, focado nas suas necessidades.</p>
+      <h3>O que é PDI?</h3>
+      <p>É um plano de desenvolvimento dos colaboradores focado em suas habilidades e competências. Com ele, é mais fácil alocar o talento certo em cargos, funções e atividades alinhados com suas competências, o que, ao se tornar uma rotina, ajuda a criar experiência e conhecimento.</p>
+      <h3>Considerações finais</h3>
+      <p>O PDI é uma necessidade caso a empresa valorize os membros da equipe como indivíduos e queira que cada um tenha seu próprio progresso individual para atingir a máxima eficiência.</p>
+      <h3>Desligamento</h3>
+      <p>O desligamento pode ter vários motivos: falta de desempenho, problema de gestão de clima, corte de gastos, pedido de demissão, entre outros.</p>
+      <p>Antes do desligamento, será feita uma reunião com o funcionário para conversar e entender a situação, saber o motivo de querer sair e auxiliar caso ele tenha alguma dificuldade.</p>
+      <p><strong>Corte de gastos:</strong> nesse cenário, será feita uma reunião com o funcionário e o motivo será explicado. Se necessário, ele terá um tempo para conseguir um emprego antes de ser desligado definitivamente.</p>
     `,
     faq: [
-      { p: 'Quanto tempo dura?', r: 'Programas típicos variam de 4 a 6 meses, com encontros quinzenais ou mensais. Programas mais curtos tendem a não gerar mudança real.' },
-      { p: 'Vale para líderes experientes?', r: 'Sim. Liderança é uma prática que se aprimora continuamente. Líderes experientes costumam ter pontos cegos que só aparecem em processos estruturados.' },
-      { p: 'Como medir resultado?', r: 'Combinamos indicadores duros (turnover, clima, produtividade) e pesquisa com os liderados antes/depois do programa.' }
+      { p: 'O que é um PDI?', r: 'É um plano de desenvolvimento dos colaboradores, focado em suas habilidades e competências.' },
+      { p: 'Qual a vantagem de usar o PDI?', r: 'Facilita alocar o talento certo em cargos, funções e atividades alinhados às suas competências, o que, ao virar rotina, ajuda a criar experiência e conhecimento.' },
+      { p: 'O que acontece antes de um desligamento?', r: 'Uma reunião com o funcionário para conversar, entender a situação, saber o motivo de querer sair e auxiliá-lo caso tenha alguma dificuldade.' },
+      { p: 'Como funciona o desligamento por corte de gastos?', r: 'É feita uma reunião em que o motivo é explicado. Se necessário, o funcionário terá um tempo para conseguir um emprego antes de ser desligado definitivamente.' }
     ]
   },
 

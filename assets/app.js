@@ -46,10 +46,8 @@
       filhos: ['infraestrutura.html', 'seguranca-informacao.html', 'lgpd-dados.html'] }
   ];
 
-  const ICO_LOGO = '<svg viewBox="0 0 32 32" fill="none" aria-hidden="true">' +
-    '<circle cx="16" cy="16" r="11.5" stroke="currentColor" stroke-width="1.5" opacity=".5"/>' +
-    '<circle cx="16" cy="16" r="5" fill="currentColor"/>' +
-    '<circle cx="26.2" cy="11.6" r="2.6" fill="#5C7034"/></svg>';
+  const ICO_LOGO = '<img class="logo__img logo__img--claro" src="assets/img/logo-claro.png" alt="" width="36" height="36">' +
+    '<img class="logo__img logo__img--escuro" src="assets/img/logo-escuro.png" alt="" width="36" height="36">';
   const ICO_SETA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
   const ICO_MENU = '<svg class="ico-abrir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>' +
     '<svg class="ico-fechar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
