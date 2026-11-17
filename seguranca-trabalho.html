@@ -2,106 +2,30 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="color-scheme" content="light dark">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Segurança do Trabalho — Ethos e Terra</title>
 <meta name="description" content="Segurança do Trabalho: prevenir acidentes, identificar riscos e garantir um ambiente seguro e saudável.">
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add('js')</script>
-<script>(function(){try{var t=localStorage.getItem('ethos-tema');if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})()</script>
-<link rel="stylesheet" href="assets/styles.css">
-<link rel="stylesheet" href="assets/hub.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="site-header"></div>
-
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html" aria-label="Ethos e Terra, página inicial"><img src="img/logo-claro.png" alt="" width="42" height="42"><span>Ethos e Terra</span></a>
+<nav class="nav" aria-label="Principal"><a href="index.html">Início</a><a href="seguranca-trabalho.html" aria-current="page">Segurança</a><a href="marketing.html">Marketing</a><a href="qualidade.html">Qualidade</a><a href="rh.html">RH</a><a href="contato.html">Contato</a></nav>
+<details class="menu"><summary>Menu</summary><nav aria-label="Principal (celular)"><a href="index.html">Início</a><a href="seguranca-trabalho.html" aria-current="page">Segurança</a><a href="marketing.html">Marketing</a><a href="qualidade.html">Qualidade</a><a href="rh.html">RH</a><a href="contato.html">Contato</a></nav></details>
+</div></header>
 <main>
-
-<section class="page-hero">
-  <div class="container">
-    <div class="page-hero__grid"><div>
-    <nav class="breadcrumbs" aria-label="Você está em">
-      <a href="index.html">Início</a><span>/</span>
-      <strong>Segurança do Trabalho</strong>
-    </nav>
-    <h1>Segurança do Trabalho</h1>
-    <p class="page-hero__lead">Prevenir acidentes, identificar riscos e garantir um ambiente de trabalho seguro e saudável para os funcionários.</p>
-    </div><img class="page-hero__art" src="assets/img/pilar-seguranca-trabalho.svg" alt="" width="640" height="400"></div>
-    <div class="page-hero__meta"><div><strong>Prevenir</strong><span>Acidentes</span></div><div><strong>Identificar</strong><span>Riscos</span></div><div><strong>Garantir</strong><span>Ambiente seguro e saudável</span></div></div>
-  </div>
-</section>
-
-<div class="container x-wrap">
-  <aside class="x-toc" aria-label="Nesta página"><p>Nesta página</p><ol><li><a href="#objetivo">Objetivo</a></li><li><a href="#entregas">O que entregamos</a></li></ol></aside>
-  <div>
-    <section class="x-sec" id="objetivo">
-      <h2>Segurança do Trabalho</h2>
-      <p>A área de Segurança do Trabalho em uma consultoria tem como objetivo prevenir acidentes, identificar riscos e garantir um ambiente de trabalho seguro e saudável para os funcionários.</p>
-      <div class="x-cols">
-        <div><h3>Prevenir</h3><p>Acidentes no dia a dia da operação.</p></div>
-        <div><h3>Identificar</h3><p>Riscos presentes no ambiente de trabalho.</p></div>
-        <div><h3>Garantir</h3><p>Um ambiente seguro e saudável para os funcionários.</p></div>
-      </div>
-    </section>
-    <section class="x-sec" id="entregas">
-      <h2>O que entregamos</h2>
-      <ul class="x-pills"><li>PGR, PCMSO e LTCAT</li><li>Laudos e programas de NRs específicas</li><li>Treinamentos presenciais e EAD</li><li>CIPA, SIPAT e investigação de acidentes</li><li>Análise de risco e mapeamento de periculosidade</li><li>Cultura de prevenção e percepção de risco</li></ul>
-    </section>
-  </div>
-</div>
-
-<section class="secao secao--areia">
-  <div class="container">
-    <div class="cabecalho cabecalho--centro revelar">
-      <span class="eyebrow">Especialidades</span>
-      <h2 class="titulo">O que <em>entregamos</em> nesta frente.</h2>
-      <p class="subtitulo">Três frentes principais, cada uma com escopo, prazos e entregas próprias.</p>
-    </div>
-    <div class="grid grid--3 revelar-stagger">
-      <a href="nr-01.html" class="card-servico" style="text-decoration:none">
-        <div class="card__num">01</div>
-        <div class="card__icone"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/></svg></div>
-        <h3>NR-01</h3>
-        <p>Disposições gerais e gerenciamento de riscos ocupacionais — incluindo os riscos psicossociais.</p>
-        <span class="card__link">Ver detalhes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a href="nr-35.html" class="card-servico" style="text-decoration:none">
-        <div class="card__num">02</div>
-        <div class="card__icone"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M9 5l3-3 3 3"/><path d="M5 12h14M7 12l2 10h6l2-10"/></svg></div>
-        <h3>NR-35</h3>
-        <p>Trabalho em altura: análise de risco, sistemas de ancoragem, treinamentos e resgate.</p>
-        <span class="card__link">Ver detalhes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a href="pgr-pcmso.html" class="card-servico" style="text-decoration:none">
-        <div class="card__num">03</div>
-        <div class="card__icone"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v3H9z"/><path d="M5 6h14v15H5z"/><path d="M9 12h6M9 16h6"/></svg></div>
-        <h3>PGR &amp; PCMSO</h3>
-        <p>Programa de Gerenciamento de Riscos e Programa de Controle Médico de Saúde Ocupacional.</p>
-        <span class="card__link">Ver detalhes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="secao">
-  <div class="container">
-    <div class="cta-final">
-      <h2>Quer estruturar a segurança da sua operação?</h2>
-      <p>Fale com nosso time e receba uma proposta de diagnóstico específica para o pilar de segurança do trabalho.</p>
-      <div class="cta-final__acoes">
-        <a href="contato.html" class="btn btn--primario">Solicitar proposta</a>
-        <a href="index.html" class="btn btn--contorno">Voltar ao início</a>
-      </div>
-    </div>
-  </div>
-</section>
-
+<section class="hero hero--solo"><div class="wrap"><div><a class="voltar" href="index.html">← Início</a><h1>Segurança do Trabalho</h1><p class="lead">Prevenir acidentes, identificar riscos e garantir um ambiente de trabalho seguro e saudável para os funcionários.</p></div></div></section>
+<section class="sec" id="objetivo"><div class="wrap"><div class="sec__head"><h2>Objetivo</h2><p>O que a área faz dentro de uma consultoria.</p></div><div class="sec__body"><p>A área de Segurança do Trabalho em uma consultoria tem como objetivo prevenir acidentes, identificar riscos e garantir um ambiente de trabalho seguro e saudável para os funcionários.</p><div class="cols cols--grande" style="margin-top:32px"><div><h3>Prevenir</h3><p>Acidentes no dia a dia do trabalho.</p></div><div><h3>Identificar</h3><p>Riscos presentes no ambiente.</p></div><div><h3>Garantir</h3><p>Um ambiente seguro e saudável para os funcionários.</p></div></div></div></div></section>
+<section class="cta"><div class="wrap"><div class="cta__box"><h2>Vamos conversar sobre a sua empresa?</h2><p>Fale com a nossa equipe e receba uma proposta de diagnóstico.</p><a class="btn btn--tan" href="contato.html">Entrar em contato</a></div></div></section>
 </main>
-
-<div id="site-footer"></div>
-<script src="assets/app.js" defer></script>
+<footer class="foot"><div class="wrap">
+<div><a class="brand" href="index.html"><img src="img/logo-escuro.png" alt="" width="42" height="42"><span>Ethos e Terra</span></a><p>Consultoria em Segurança do Trabalho, Marketing, Qualidade e Recursos Humanos.</p></div>
+<ul><li><a href="index.html">Início</a></li><li><a href="seguranca-trabalho.html">Segurança</a></li><li><a href="marketing.html">Marketing</a></li><li><a href="qualidade.html">Qualidade</a></li><li><a href="rh.html">RH</a></li><li><a href="contato.html">Contato</a></li></ul>
+<small>© Ethos e Terra. Todos os direitos reservados.</small>
+</div></footer>
 </body>
 </html>
