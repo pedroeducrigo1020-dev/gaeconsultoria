@@ -1,8 +1,7 @@
 # Ethos e Terra
 
-Site estático em tema escuro.
+Site estático em tema escuro. TODOS os arquivos ficam na mesma pasta (raiz do repositório), sem subpastas:
 
-index.html · seguranca-trabalho.html · marketing.html · qualidade.html · rh.html · ti.html · contato.html
-css/style.css · js/main.js · img/ (imagens originais, sem recompressão)
-
-Envie TODAS as pastas junto com os .html, mantendo a estrutura.
+index.html, seguranca-trabalho.html, marketing.html, qualidade.html, rh.html, ti.html, contato.html
+style.css, main.js, vercel.json
+logo-escuro.png, favicon.png, pdca.jpeg, pdca-resumo.jpeg, 5s.jpeg, 5s-resumo.jpeg, ishikawa.jpeg

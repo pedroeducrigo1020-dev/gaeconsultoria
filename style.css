@@ -27,7 +27,7 @@ img{max-width:100%;height:auto}a{color:var(--moss)}
 .btn--line{background:transparent;border-color:rgba(229,215,196,.5);color:var(--bone)}.btn--line:hover{background:var(--bone);color:var(--deep);border-color:var(--bone)}
 /* hero */
 .hero{position:relative;overflow:hidden;background:var(--deep);color:var(--bone);padding-block:clamp(56px,9vw,112px)}
-.hero::after{content:"";position:absolute;right:-140px;top:50%;width:620px;height:620px;transform:translateY(-50%);background:url(../img/logo-escuro.png) center/contain no-repeat;opacity:.07;pointer-events:none}
+.hero::after{content:"";position:absolute;right:-140px;top:50%;width:620px;height:620px;transform:translateY(-50%);background:url(logo-escuro.png) center/contain no-repeat;opacity:.07;pointer-events:none}
 .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(28px,5vw,72px);align-items:center}
 .hero--solo .wrap{grid-template-columns:minmax(0,1fr)}
 .voltar{display:inline-block;margin-bottom:26px;color:var(--moss-soft);text-decoration:none;font-weight:500;font-size:.95rem}.voltar:hover{text-decoration:underline}
