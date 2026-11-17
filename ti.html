@@ -2,121 +2,169 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="color-scheme" content="light dark">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tecnologia da Informação — Ethos e Terra</title>
-<meta name="description" content="Tecnologia da Informação: pilar orbital da Ethos e Terra, integrado ao núcleo de gestão ambiental.">
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<meta name="description" content="Tecnologia da Informação: infraestrutura, segurança da informação e LGPD.">
+<link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add('js')</script>
-<script>(function(){try{var t=localStorage.getItem('ethos-tema');if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})()</script>
-<link rel="stylesheet" href="assets/styles.css">
-<link rel="stylesheet" href="assets/hub.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F2E8;--areia:#EDE3D1;--card:#FDFAF3;--bone:#E5D7C4;--tan:#C9AE82;--kombu:#3B4A35;--deep:#232D1E;--moss:#5C7034;--moss-soft:#A8BF78;--cafe:#4B3621;--ink:#232619;--ink-soft:#55564A;--line:rgba(75,54,33,.15);--display:'Fraunces',Georgia,'Times New Roman',serif;--body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;--r:18px;--hh:72px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.7 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto}a{color:var(--moss)}
+:focus-visible{outline:3px solid var(--moss);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:clamp(20px,4vw,40px)}
+/* cabeçalho */
+.top{position:sticky;top:0;z-index:30;background:rgba(247,242,232,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--hh)}
+.brand{display:flex;align-items:center;gap:12px;font:500 1.35rem var(--display);color:var(--kombu);text-decoration:none}
+.brand img{width:42px;height:42px}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{padding:8px 15px;border-radius:999px;color:var(--ink-soft);text-decoration:none;font-weight:500;font-size:.95rem}
+.nav a:hover{background:var(--areia);color:var(--ink)}
+.nav a[aria-current]{background:var(--kombu);color:#fff}
+.menu{display:none;position:relative}
+.menu summary{list-style:none;cursor:pointer;padding:9px 18px;border:1px solid var(--line);border-radius:999px;font-weight:600;font-size:.92rem}
+.menu summary::-webkit-details-marker{display:none}
+.menu nav{position:absolute;right:0;top:52px;min-width:220px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:8px;display:grid;box-shadow:0 20px 40px -20px rgba(35,45,30,.4)}
+.menu a{padding:11px 14px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:500}
+.menu a[aria-current]{background:var(--areia)}
+@media(max-width:860px){.nav{display:none}.menu{display:block}}
+/* botões */
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;background:var(--kombu);color:#fff;font-weight:600;text-decoration:none;border:2px solid var(--kombu);transition:background .2s,color .2s}
+.btn:hover{background:var(--deep);border-color:var(--deep)}
+.btn--tan{background:var(--tan);border-color:var(--tan);color:var(--deep)}.btn--tan:hover{background:var(--bone);border-color:var(--bone)}
+.btn--line{background:transparent;border-color:rgba(229,215,196,.5);color:var(--bone)}.btn--line:hover{background:var(--bone);color:var(--deep);border-color:var(--bone)}
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--deep);color:var(--bone);padding-block:clamp(56px,9vw,112px)}
+.hero::after{content:"";position:absolute;right:-140px;top:50%;width:620px;height:620px;transform:translateY(-50%);background:url(../img/logo-escuro.png) center/contain no-repeat;opacity:.07;pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(28px,5vw,72px);align-items:center}
+.hero--solo .wrap{grid-template-columns:minmax(0,1fr)}
+.voltar{display:inline-block;margin-bottom:26px;color:var(--moss-soft);text-decoration:none;font-weight:500;font-size:.95rem}.voltar:hover{text-decoration:underline}
+.hero h1{margin:0 0 22px;font:400 clamp(2.4rem,5.6vw,4.4rem)/1.05 var(--display);letter-spacing:-.025em;color:#FDFAF3;max-width:16ch}
+.hero--solo h1{max-width:20ch}
+.hero p.lead{margin:0 0 30px;max-width:56ch;font-size:1.15rem;color:rgba(229,215,196,.84)}
+.hero__fig{justify-self:end;width:100%;max-width:380px;background:#fff;border-radius:28px;padding:18px;box-shadow:0 30px 60px -24px rgba(0,0,0,.6)}
+.hero__fig img{display:block;width:100%;border-radius:14px}
+.hero__acoes{display:flex;flex-wrap:wrap;gap:12px}
+/* seções */
+.sec{padding-block:clamp(52px,7vw,100px);border-top:1px solid var(--line)}
+.sec--tint{background:var(--areia)}
+.sec>.wrap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,8fr);gap:clamp(28px,5vw,88px)}
+.sec__head{position:sticky;top:calc(var(--hh) + 28px);align-self:start}
+.sec h2{margin:0 0 14px;font:400 clamp(1.9rem,3.2vw,2.7rem)/1.1 var(--display);letter-spacing:-.02em;color:var(--ink)}
+.sec__head p{margin:0;color:var(--ink-soft)}
+.sec__body>p{margin-top:0;color:var(--ink-soft)}
+@media(max-width:860px){.sec>.wrap{grid-template-columns:1fr}.sec__head{position:static}.hero .wrap{grid-template-columns:1fr}.hero__fig{justify-self:start;max-width:300px}.hero::after{width:380px;height:380px;right:-120px;top:20%}}
+h3{font:500 1.3rem/1.25 var(--display);margin:0 0 6px;color:var(--ink)}
+h3 small{font:400 .9rem var(--body);color:var(--ink-soft);margin-left:6px}
+/* passos numerados */
+.passos{list-style:none;counter-reset:p;margin:0;padding:0}
+.passos>li{counter-increment:p;display:grid;grid-template-columns:64px minmax(0,1fr);gap:0 14px;padding:26px 0;border-top:1px solid var(--line)}
+.passos>li:first-child{border-top:0;padding-top:0}
+.passos>li::before{content:counter(p);font:400 2.6rem/1 var(--display);color:var(--moss)}
+.passos>li>*{grid-column:2}
+.passos p{margin:0 0 12px;color:var(--ink-soft)}
+.passos p:last-child{margin-bottom:0}
+.sub{margin:22px 0 4px!important;font:500 1.05rem var(--display);color:var(--ink)!important}
+/* definições */
+.def{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0 32px;margin:16px 0 0}
+.def div{padding:13px 0 15px;border-top:1px solid var(--line);font-size:.95rem;color:var(--ink-soft);line-height:1.6}
+.def strong{display:block;color:var(--ink);margin-bottom:2px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;padding:0;list-style:none}
+.pills li{padding:7px 15px;border:1px solid var(--line);border-radius:999px;background:var(--card);font-size:.9rem;color:var(--ink-soft)}
+.funil{display:grid;gap:8px;margin:14px 0 4px}
+.funil div{width:var(--w);padding:14px 20px;border-radius:12px;background:linear-gradient(90deg,var(--kombu),var(--moss));color:#fff;font-size:.9rem;line-height:1.5}
+.funil strong{display:block;font-size:1rem}
+.destaque{margin:22px 0 0;padding:22px 26px;background:var(--card);border-left:5px solid var(--tan);border-radius:0 var(--r) var(--r) 0;color:var(--ink-soft)}
+.sec--tint .destaque{background:var(--paper)}
+.destaque p{margin:0}
+/* 4 Ps */
+.p4{display:grid;grid-template-columns:repeat(4,1fr);background:var(--deep);border-radius:var(--r);overflow:hidden}
+.p4 div{padding:34px 22px;border-left:1px solid rgba(229,215,196,.16);font:400 clamp(1.25rem,2.2vw,1.7rem) var(--display);color:var(--bone)}
+.p4 div:first-child{border-left:0}
+.p4 b{font-weight:500;font-style:italic;font-size:2em;line-height:.9;color:var(--tan)}
+@media(max-width:700px){.p4{grid-template-columns:1fr 1fr}.p4 div:nth-child(3){border-left:0}.p4 div:nth-child(n+3){border-top:1px solid rgba(229,215,196,.16)}}
+/* KPIs */
+.kpi{margin:0}
+.kpi div{display:grid;grid-template-columns:130px minmax(0,1fr);gap:6px 24px;padding:22px 0;border-top:1px solid var(--line)}
+.kpi div:first-child{border-top:0;padding-top:0}
+.kpi dt{font:400 2rem/1.1 var(--display);color:var(--moss)}
+.kpi dd{margin:0;color:var(--ink-soft);font-size:.96rem}
+.kpi dd strong{display:block;color:var(--ink);font-size:1.02rem}
+@media(max-width:560px){.kpi div{grid-template-columns:1fr}}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px}
+.cols div{padding-left:18px;border-left:3px solid var(--moss);color:var(--ink-soft);font-size:.96rem}
+.cols p{margin:0}
+.cols--grande h3{font-size:1.7rem}
+/* figuras */
+.fig{background:#fff;border-radius:var(--r);padding:14px;box-shadow:0 1px 2px rgba(35,45,30,.06),0 10px 24px -12px rgba(35,45,30,.25)}
+.fig img{display:block;width:100%;border-radius:10px}
+.fig--circ{max-width:340px}
+.duo{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:clamp(22px,4vw,44px);align-items:center}
+.duo .passos>li{padding:16px 0}.duo .passos>li:first-child{padding-top:0}
+.duo .passos>li::before{font-size:2rem}
+@media(max-width:700px){.duo{grid-template-columns:1fr}.fig--circ{max-width:280px}}
+.resumo{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+/* home */
+.areas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.area{display:flex;flex-direction:column;justify-content:space-between;min-height:290px;padding:34px;border-radius:var(--r);text-decoration:none;color:var(--bone);transition:transform .25s}
+.area:hover{transform:translateY(-4px)}
+.area h3{font:400 clamp(1.6rem,2.6vw,2.2rem)/1.1 var(--display);color:inherit;margin:0 0 12px}
+.area p{margin:0;max-width:40ch;opacity:.88}
+.area span{font-weight:600;margin-top:24px}
+.area--a{background:var(--kombu)}.area--b{background:var(--cafe)}.area--c{background:var(--moss)}.area--d{background:var(--deep)}
+@media(max-width:700px){.areas{grid-template-columns:1fr}.area{min-height:0}}
+.ferr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.ferr a{text-decoration:none;color:inherit}
+.ferr strong{display:block;margin-top:12px;font:500 1.15rem var(--display)}
+.ferr span{color:var(--ink-soft);font-size:.92rem}
+@media(max-width:760px){.ferr{grid-template-columns:1fr}}
+/* chamada final e rodapé */
+.cta{padding-block:clamp(48px,7vw,88px)}
+.cta__box{background:var(--kombu);color:var(--bone);border-radius:28px;padding:clamp(32px,6vw,64px);text-align:center}
+.cta__box h2{margin:0 0 12px;font:400 clamp(1.8rem,3.4vw,2.6rem)/1.15 var(--display);color:#FDFAF3}
+.cta__box p{max-width:52ch;margin:0 auto 26px;color:rgba(229,215,196,.85)}
+.foot{background:var(--deep);color:rgba(229,215,196,.8);padding-block:48px 32px;font-size:.95rem}
+.foot .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:32px}
+.foot .brand{color:var(--bone);margin-bottom:12px}
+.foot p{margin:0;max-width:40ch}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px}
+.foot a{color:var(--bone);text-decoration:none}.foot a:hover{text-decoration:underline}
+.foot small{grid-column:1/-1;padding-top:24px;border-top:1px solid rgba(229,215,196,.16);opacity:.7}
+@media(max-width:700px){.foot .wrap{grid-template-columns:1fr}}
+.email{font:400 clamp(1.4rem,3vw,2.2rem) var(--display);word-break:break-all}
+.ferr .fig{aspect-ratio:1;display:grid;place-items:center}
+.ferr .fig img{max-height:100%;object-fit:contain}
+.area--e{grid-column:1/-1;background:var(--cafe);min-height:200px;background:linear-gradient(120deg,var(--kombu),var(--deep))}
+.faq{margin-top:28px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq summary{cursor:pointer;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--moss);font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:10px 0 0;color:var(--ink-soft)}
+.ferr .fig{aspect-ratio:auto;height:clamp(170px,18vw,230px)}.ferr .fig img{max-height:100%;width:auto;max-width:100%}
+
+</style>
 </head>
 <body>
-<div id="site-header"></div>
-
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html" aria-label="Ethos e Terra, página inicial"><img src="img/logo-claro.png" alt="" width="42" height="42"><span>Ethos e Terra</span></a>
+<nav class="nav" aria-label="Principal"><a href="index.html">Início</a><a href="seguranca-trabalho.html">Segurança</a><a href="marketing.html">Marketing</a><a href="qualidade.html">Qualidade</a><a href="rh.html">RH</a><a href="ti.html" aria-current="page">TI</a><a href="contato.html">Contato</a></nav>
+<details class="menu"><summary>Menu</summary><nav aria-label="Principal (celular)"><a href="index.html">Início</a><a href="seguranca-trabalho.html">Segurança</a><a href="marketing.html">Marketing</a><a href="qualidade.html">Qualidade</a><a href="rh.html">RH</a><a href="ti.html" aria-current="page">TI</a><a href="contato.html">Contato</a></nav></details>
+</div></header>
 <main>
-
-<section class="page-hero">
-  <div class="container">
-    <div class="page-hero__grid"><div>
-    <nav class="breadcrumbs" aria-label="Você está em">
-      <a href="index.html">Início</a><span>/</span>
-      <strong>Tecnologia da Informação</strong>
-    </nav>
-    <h1>Tecnologia da Informação é <em>alicerce, não suporte</em>.</h1>
-    <p class="page-hero__lead">
-      Sem dados confiáveis e sistemas seguros, nenhum indicador ESG se sustenta. Infraestrutura, segurança da informação e conformidade com a LGPD, integradas.
-    </p>
-    </div><img class="page-hero__art" src="assets/img/pilar-ti.svg" alt="" width="640" height="400"></div>
-    <div class="page-hero__meta">
-      <div><strong>99,9%</strong><span>Disponibilidade</span></div>
-      <div><strong>24/7</strong><span>Monitoramento</span></div>
-      <div><strong>ISO 27001</strong><span>Alinhamento em segurança</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="secao">
-  <div class="container grid grid--2-1 align-center">
-    <div class="revelar prose">
-      <span class="eyebrow">Pilar 06 — Infraestrutura e Dados</span>
-      <h2 class="titulo" style="margin-bottom:24px">A base técnica de <em>todo o sistema</em>.</h2>
-      <p>
-        Infraestrutura, segurança da informação e LGPD não são projetos isolados: são camadas técnicas que sustentam a confiabilidade de todos os outros pilares.
-      </p>
-      <ul>
-        <li>Diagnóstico e redesenho de infraestrutura</li>
-        <li>Migração para nuvem e continuidade de negócio (BCP/DRP)</li>
-        <li>Política de Segurança da Informação e testes de invasão</li>
-        <li>Gestão de identidades e acessos</li>
-        <li>Mapeamento de dados pessoais e bases legais</li>
-        <li>DPO como serviço para conformidade com a LGPD</li>
-      </ul>
-    </div>
-    <div class="revelar">
-      <div class="card" style="background:linear-gradient(155deg,var(--cafe-noir),var(--cafe-noir-deep));border:none;color:var(--bone);padding:40px">
-        <div style="font-family:var(--ff-display);font-size:3.4rem;line-height:1;color:var(--tan);letter-spacing:-.04em;font-variation-settings:'SOFT' 40">80%</div>
-        <p style="color:rgba(229,215,196,.78);margin-top:14px;font-size:.95rem;line-height:1.7">
-          Dos incidentes de segurança envolvem erro humano — por isso treinamos continuamente as equipes.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="secao secao--areia">
-  <div class="container">
-    <div class="cabecalho cabecalho--centro revelar">
-      <span class="eyebrow">Especialidades</span>
-      <h2 class="titulo">O que <em>entregamos</em> nesta frente.</h2>
-      <p class="subtitulo">Três frentes principais, cada uma com escopo, prazos e entregas próprias.</p>
-    </div>
-    <div class="grid grid--3 revelar-stagger">
-      <a href="infraestrutura.html" class="card-servico" style="text-decoration:none">
-        <div class="card__num">01</div>
-        <div class="card__icone"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.4"/><rect x="3" y="14" width="18" height="6" rx="1.4"/><path d="M7 7h.01M7 17h.01"/></svg></div>
-        <h3>Infraestrutura de TI</h3>
-        <p>Servidores, redes, nuvem e suporte confiáveis para a operação.</p>
-        <span class="card__link">Ver detalhes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a href="seguranca-informacao.html" class="card-servico" style="text-decoration:none">
-        <div class="card__num">02</div>
-        <div class="card__icone"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></div>
-        <h3>Segurança da Informação</h3>
-        <p>Proteção de dados e sistemas alinhada à ISO 27001 e à LGPD.</p>
-        <span class="card__link">Ver detalhes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a href="lgpd-dados.html" class="card-servico" style="text-decoration:none">
-        <div class="card__num">03</div>
-        <div class="card__icone"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
-        <h3>LGPD &amp; Governança de Dados</h3>
-        <p>Conformidade com a LGPD como projeto de TI, processos e cultura.</p>
-        <span class="card__link">Ver detalhes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="secao">
-  <div class="container">
-    <div class="cta-final revelar">
-      <h2>Quer estruturar a base técnica da sua empresa?</h2>
-      <p>Fale com nosso time e receba uma proposta de diagnóstico específica para o pilar de tecnologia da informação.</p>
-      <div class="cta-final__acoes">
-        <a href="contato.html" class="btn btn--primario">Solicitar proposta</a>
-        <a href="index.html" class="btn btn--contorno">Voltar ao início</a>
-      </div>
-    </div>
-  </div>
-</section>
-
+<section class="hero hero--solo"><div class="wrap"><div><a class="voltar" href="index.html">← Início</a><h1>Tecnologia da Informação</h1><p class="lead">Infraestrutura, segurança da informação e conformidade com a LGPD, integradas. Sem dados confiáveis e sistemas seguros, nenhum indicador se sustenta.</p></div></div></section>
+<section class="sec" id="base"><div class="wrap"><div class="sec__head"><h2>A base técnica de todo o sistema</h2><p>Pilar de infraestrutura e dados.</p></div><div class="sec__body"><p>Infraestrutura, segurança da informação e LGPD não são projetos isolados: são camadas técnicas que sustentam a confiabilidade de todos os outros pilares.</p><ul class="pills"><li>Diagnóstico e redesenho de infraestrutura</li><li>Migração para nuvem e continuidade de negócio (BCP/DRP)</li><li>Política de Segurança da Informação e testes de invasão</li><li>Gestão de identidades e acessos</li><li>Mapeamento de dados pessoais e bases legais</li><li>DPO como serviço para conformidade com a LGPD</li></ul><div class="destaque"><p><strong>80%</strong> dos incidentes de segurança envolvem erro humano. Por isso treinamos continuamente as equipes.</p></div></div></div></section><section class="sec sec--tint" id="infraestrutura"><div class="wrap"><div class="sec__head"><h2>Infraestrutura de TI</h2><p>Servidores, redes, nuvem e suporte confiáveis para a operação. Toda operação moderna depende de uma infraestrutura confiável e segura.</p></div><div class="sec__body"><h3>O que cobrimos</h3><ul class="pills"><li>Diagnóstico e redesenho de infraestrutura</li><li>Migração para nuvem (AWS, Azure, Google Cloud)</li><li>Gestão de redes, firewall e VPN</li><li>Backup, redundância e continuidade de negócio</li><li>Monitoramento proativo e suporte técnico</li><li>Gestão de fornecedores e contratos de TI</li></ul><h3 style="margin-top:28px">Como se conecta ao ESG</h3><p>Data centers são grandes consumidores de energia. Migrar para a nuvem, otimizar recursos e escolher fornecedores com compromissos ambientais são decisões que impactam o desempenho ESG da empresa.</p><h3>Gestão de continuidade</h3><p>Elaboramos planos de continuidade e recuperação de desastres (BCP/DRP) que garantem que a empresa continue operando mesmo diante de falhas, ataques ou desastres naturais.</p><div class="faq"><details><summary>Vocês fazem migração completa para nuvem?</summary><p>Sim, quando faz sentido. Nem toda carga deve ir para nuvem: avaliamos caso a caso e recomendamos a estratégia mais adequada.</p></details><details><summary>Quanto custa manter TI terceirizada?</summary><p>Depende do porte e da criticidade. Empresas pequenas costumam gastar menos com TI gerenciada do que mantendo equipe interna.</p></details><details><summary>Atendem emergências?</summary><p>Sim. Oferecemos planos com SLA de resposta em até 1 hora para incidentes críticos.</p></details></div></div></div></section><section class="sec" id="seguranca-informacao"><div class="wrap"><div class="sec__head"><h2>Segurança da Informação</h2><p>Proteger dados, sistemas e reputação. Pequenas e médias empresas são os principais alvos de ameaças cibernéticas.</p></div><div class="sec__body"><h3>O que fazemos</h3><ul class="pills"><li>Política de Segurança da Informação (PSI)</li><li>Análise de vulnerabilidades e testes de invasão</li><li>Firewall, antivírus, EDR e proteção de endpoints</li><li>Gestão de identidades e acessos</li><li>Conscientização e treinamento de colaboradores</li><li>Plano de resposta a incidentes</li><li>Alinhamento à ISO 27001 e LGPD</li></ul><h3 style="margin-top:28px">O elo mais fraco</h3><p>Mais de 80% dos incidentes envolvem erro humano. Por isso, treinamos colaboradores continuamente: phishing simulado, workshops e comunicação interna recorrente sobre segurança.</p><h3>Integração com LGPD</h3><p>Segurança da informação é base técnica para conformidade com a LGPD. Trabalhamos as duas frentes em conjunto: política, controles técnicos e governança de dados.</p><div class="faq"><details><summary>Minha empresa é pequena. Preciso me preocupar?</summary><p>Sim. Criminosos miram pequenas empresas justamente porque acreditam que são mais vulneráveis. O custo de um incidente pode inviabilizar o negócio.</p></details><details><summary>O que é teste de invasão (pentest)?</summary><p>É uma simulação controlada de ataque cibernético, feita por especialistas, para identificar vulnerabilidades antes que criminosos as encontrem.</p></details><details><summary>Vocês fazem gestão contínua ou só projeto pontual?</summary><p>Fazemos os dois. A maioria dos clientes opta por gestão contínua, com monitoramento, resposta a incidentes e evolução constante.</p></details></div></div></div></section><section class="sec sec--tint" id="lgpd"><div class="wrap"><div class="sec__head"><h2>LGPD e Governança de Dados</h2><p>Conformidade com a Lei Geral de Proteção de Dados não é só questão jurídica: é projeto que envolve TI, processos e cultura.</p></div><div class="sec__body"><h3>O que a LGPD exige</h3><p>Mapeamento de dados pessoais, base legal para tratamento, políticas de privacidade, gestão de consentimento, atendimento a titulares, notificação de incidentes, indicação de encarregado (DPO) e programa de governança.</p><h3>Como conduzimos o projeto</h3><ul class="pills"><li>Mapeamento de dados pessoais (data mapping)</li><li>Análise de bases legais e riscos</li><li>Política de privacidade e termos de uso</li><li>Contratos com operadores e parceiros</li><li>Processo para requisições de titulares</li><li>Plano de resposta a incidentes</li><li>Treinamento e cultura de privacidade</li><li>Indicação ou atuação como DPO externo</li></ul><h3 style="margin-top:28px">DPO como serviço</h3><p>Atuamos como Encarregado de Dados (DPO) externo para empresas que precisam da função mas não querem contratar internamente. Assumimos o papel com responsabilidade técnica e relatórios periódicos.</p><div class="faq"><details><summary>LGPD vale para minha empresa?</summary><p>Aplica-se a qualquer empresa que trate dados pessoais de pessoas no Brasil, independente do porte ou setor.</p></details><details><summary>Quanto custa uma multa por descumprimento?</summary><p>Até 2% do faturamento da empresa no último exercício, limitado a R$ 50 milhões por infração. Além do dano reputacional.</p></details><details><summary>Posso terceirizar o DPO?</summary><p>Sim, e é comum. A ANPD permite DPO externo, desde que tenha autonomia e recursos para exercer a função.</p></details></div></div></div></section>
+<section class="cta"><div class="wrap"><div class="cta__box"><h2>Vamos conversar sobre a sua empresa?</h2><p>Fale com a nossa equipe e receba uma proposta de diagnóstico.</p><a class="btn btn--tan" href="contato.html">Entrar em contato</a></div></div></section>
 </main>
-
-<div id="site-footer"></div>
-<script src="assets/app.js" defer></script>
+<footer class="foot"><div class="wrap">
+<div><a class="brand" href="index.html"><img src="img/logo-escuro.png" alt="" width="42" height="42"><span>Ethos e Terra</span></a><p>Consultoria em Segurança do Trabalho, Marketing, Qualidade, Recursos Humanos e Tecnologia da Informação.</p></div>
+<ul><li><a href="index.html">Início</a></li><li><a href="seguranca-trabalho.html">Segurança</a></li><li><a href="marketing.html">Marketing</a></li><li><a href="qualidade.html">Qualidade</a></li><li><a href="rh.html">RH</a></li><li><a href="ti.html">TI</a></li><li><a href="contato.html">Contato</a></li></ul>
+<small>© Ethos e Terra. Todos os direitos reservados.</small>
+</div></footer>
 </body>
 </html>
