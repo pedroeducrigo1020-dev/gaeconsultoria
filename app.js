@@ -38,7 +38,7 @@
       filhos: ['branding-esg.html', 'marketing-digital.html', 'comunicacao-interna.html'] },
     { href: 'qualidade.html', nome: 'Qualidade',
       filhos: ['iso-9001.html', 'iso-14001.html', 'auditorias.html'] },
-    { href: 'filosofia-empresa.html', nome: 'Filosofia de Empresa',
+    { href: 'index.html', nome: 'Filosofia de Empresa',
       filhos: ['missao-visao-valores.html', 'codigo-conduta.html', 'governanca.html'] },
     { href: 'rh.html', nome: 'Recursos Humanos',
       filhos: ['recrutamento.html', 'clima-psicossocial.html', 'treinamento-lideranca.html'] },
@@ -46,10 +46,8 @@
       filhos: ['infraestrutura.html', 'seguranca-informacao.html', 'lgpd-dados.html'] }
   ];
 
-  const ICO_LOGO = '<svg viewBox="0 0 32 32" fill="none" aria-hidden="true">' +
-    '<circle cx="16" cy="16" r="11.5" stroke="currentColor" stroke-width="1.5" opacity=".5"/>' +
-    '<circle cx="16" cy="16" r="5" fill="currentColor"/>' +
-    '<circle cx="26.2" cy="11.6" r="2.6" fill="#5C7034"/></svg>';
+  const ICO_LOGO = '<img class="logo__img logo__img--claro" src="assets/img/logo-claro.png" alt="" width="36" height="36">' +
+    '<img class="logo__img logo__img--escuro" src="assets/img/logo-escuro.png" alt="" width="36" height="36">';
   const ICO_SETA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
   const ICO_MENU = '<svg class="ico-abrir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>' +
     '<svg class="ico-fechar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
@@ -109,9 +107,8 @@
           '<a class="logo" href="index.html" aria-label="Ethos e Terra — início">' + ICO_LOGO + '<span>Ethos e Terra</span></a>' +
           '<nav class="nav" id="nav-principal" aria-label="Principal">' +
             '<a class="nav__link" href="index.html"' + cur('index.html') + '>Início</a>' +
-            '<a class="nav__link" href="gestao-ambiental.html"' + cur('gestao-ambiental.html') + '>Gestão Ambiental</a>' +
-            '<div class="nav__drop">' +
-              '<a class="nav__link" href="gestao-ambiental.html#pilares"' + (noPilar ? ' aria-current="page"' : '') + '>Pilares ' + ICO_SETA + '</a>' +
+                        '<div class="nav__drop">' +
+              '<a class="nav__link" href="index.html"' + (noPilar ? ' aria-current="page"' : '') + '>Pilares ' + ICO_SETA + '</a>' +
               '<ul class="nav__menu">' +
                 PILARES.map(p => '<li><a href="' + p.href + '"' +
                   ((p.href === atual || p.filhos.includes(atual)) ? ' aria-current="page"' : '') + '>' + p.nome + '</a></li>').join('') +
@@ -160,10 +157,9 @@
               '<p class="site-footer__sobre">Consultoria integrada que parte da gestão ambiental e conecta seis pilares em um único sistema.</p>' +
             '</div>' +
             '<div>' +
-              '<h4>Núcleo e pilares</h4>' +
+              '<h4>Pilares</h4>' +
               '<ul>' +
-                '<li><a href="gestao-ambiental.html">Gestão Ambiental</a></li>' +
-                PILARES.map(p => '<li><a href="' + p.href + '">' + p.nome + '</a></li>').join('') +
+                                PILARES.map(p => '<li><a href="' + p.href + '">' + p.nome + '</a></li>').join('') +
               '</ul>' +
             '</div>' +
             '<div>' +

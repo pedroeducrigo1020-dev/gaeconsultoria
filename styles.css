@@ -436,6 +436,12 @@ button{font:inherit}
   color:var(--kombu-green);
 }
 .logo svg{width:30px;height:30px}
+.logo__img{width:36px;height:36px;display:block}
+.logo__img--escuro{display:none}
+[data-theme="dark"] .logo__img--claro{display:none}
+[data-theme="dark"] .logo__img--escuro{display:block}
+.site-footer .logo__img--claro{display:none}
+.site-footer .logo__img--escuro{display:block}
 
 .nav{display:flex;align-items:center;gap:4px}
 .nav__link{
@@ -758,3 +764,25 @@ button{font:inherit}
 [data-theme="dark"] .tema-toggle .ico-lua{display:none}
 .site-header__inner > .nav{margin-left:auto}
 @media (max-width:920px){.site-header__inner > .nav{margin-left:0}}
+
+
+/* ---------- Hero da home: logo no lugar dos círculos de fundo ---------- */
+.page-hero.page-hero--logo,
+[data-theme="dark"] .page-hero.page-hero--logo{
+  background:linear-gradient(180deg,var(--paper),var(--areia));
+}
+.page-hero--logo::before{
+  content:"";position:absolute;z-index:0;pointer-events:none;
+  width:clamp(300px,42vw,560px);aspect-ratio:1;
+  right:clamp(-60px,4vw,60px);top:50%;transform:translateY(-50%);
+  background:url("../assets/img/logo-claro.png") center/contain no-repeat;
+  opacity:.18;
+}
+[data-theme="dark"] .page-hero--logo::before{
+  background-image:url("../assets/img/logo-escuro.png");
+  opacity:.22;
+}
+@media (max-width:760px){
+  .page-hero--logo::before{width:280px;right:-90px;top:-20px;transform:none;opacity:.14}
+  [data-theme="dark"] .page-hero--logo::before{opacity:.18}
+}
