@@ -168,10 +168,10 @@ img,svg,video{max-width:100%;height:auto}
 .kpi dt{font-size:1.8rem;overflow-wrap:anywhere}
 /* menu do celular sempre cabe na tela */
 .menu nav{max-height:calc(100vh - 90px);max-height:calc(100dvh - 90px);overflow-y:auto}
-/* matriz de riscos: rola de lado no celular para manter o texto legível */
-.rolagem{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.rolagem a{display:block}
-.so-movel{display:none}
+/* imagens sempre fluidas: ocupam a largura disponível, sem tamanho fixo */
+.fig a{display:block}
+.fig img{width:100%;height:auto}
+.fig--funil{width:100%;max-width:min(440px,100%)}
 
 /* conteúdo largo nunca alarga a página */
 .sec__body,.sec__head{min-width:0}
@@ -183,8 +183,6 @@ img,svg,video{max-width:100%;height:auto}
 
 /* tablets e celulares */
 @media(max-width:760px){
-  .rolagem img{width:900px;max-width:none}
-  .so-movel{display:inline}.so-desk{display:none}
   .funil div{width:100%}
 }
 @media(max-width:640px){
@@ -238,3 +236,7 @@ img,svg,video{max-width:100%;height:auto}
   *{transition:none!important}
   .area:hover{transform:none}
 }
+
+/* cards de ferramentas (home): proporção em vez de altura fixa */
+.ferr .fig{height:auto;aspect-ratio:4/3;padding:12px}
+.ferr .fig img{width:100%;height:100%;max-height:none;max-width:100%;object-fit:contain}
