@@ -38,7 +38,7 @@
       filhos: ['branding-esg.html', 'marketing-digital.html', 'comunicacao-interna.html'] },
     { href: 'qualidade.html', nome: 'Qualidade',
       filhos: ['iso-9001.html', 'iso-14001.html', 'auditorias.html'] },
-    { href: 'index.html', nome: 'Filosofia de Empresa',
+    { href: 'filosofia-empresa.html', nome: 'Filosofia de Empresa',
       filhos: ['missao-visao-valores.html', 'codigo-conduta.html', 'governanca.html'] },
     { href: 'rh.html', nome: 'Recursos Humanos',
       filhos: ['recrutamento.html', 'clima-psicossocial.html', 'treinamento-lideranca.html'] },
@@ -107,8 +107,9 @@
           '<a class="logo" href="index.html" aria-label="Ethos e Terra — início">' + ICO_LOGO + '<span>Ethos e Terra</span></a>' +
           '<nav class="nav" id="nav-principal" aria-label="Principal">' +
             '<a class="nav__link" href="index.html"' + cur('index.html') + '>Início</a>' +
-                        '<div class="nav__drop">' +
-              '<a class="nav__link" href="index.html"' + (noPilar ? ' aria-current="page"' : '') + '>Pilares ' + ICO_SETA + '</a>' +
+            '<a class="nav__link" href="gestao-ambiental.html"' + cur('gestao-ambiental.html') + '>Gestão Ambiental</a>' +
+            '<div class="nav__drop">' +
+              '<a class="nav__link" href="gestao-ambiental.html#pilares"' + (noPilar ? ' aria-current="page"' : '') + '>Pilares ' + ICO_SETA + '</a>' +
               '<ul class="nav__menu">' +
                 PILARES.map(p => '<li><a href="' + p.href + '"' +
                   ((p.href === atual || p.filhos.includes(atual)) ? ' aria-current="page"' : '') + '>' + p.nome + '</a></li>').join('') +
@@ -157,9 +158,10 @@
               '<p class="site-footer__sobre">Consultoria integrada que parte da gestão ambiental e conecta seis pilares em um único sistema.</p>' +
             '</div>' +
             '<div>' +
-              '<h4>Pilares</h4>' +
+              '<h4>Núcleo e pilares</h4>' +
               '<ul>' +
-                                PILARES.map(p => '<li><a href="' + p.href + '">' + p.nome + '</a></li>').join('') +
+                '<li><a href="gestao-ambiental.html">Gestão Ambiental</a></li>' +
+                PILARES.map(p => '<li><a href="' + p.href + '">' + p.nome + '</a></li>').join('') +
               '</ul>' +
             '</div>' +
             '<div>' +
