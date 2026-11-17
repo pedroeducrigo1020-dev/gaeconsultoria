@@ -155,3 +155,86 @@ body{background:var(--paper);color:var(--ink)}
 .hero__fig{box-shadow:0 30px 60px -24px rgba(0,0,0,.8)}
 .area--c{background:#4E6030}
 .funil div{background:linear-gradient(90deg,#3B4A35,#5C7034)}
+
+/* ===== Responsividade (qualquer tamanho de tela) ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-wrap:break-word}
+img,svg,video{max-width:100%;height:auto}
+/* grades que nunca estouram em telas muito estreitas */
+.def{grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr))}
+.cols{grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr))}
+.resumo{grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))}
+.kpi div{grid-template-columns:160px minmax(0,1fr)}
+.kpi dt{font-size:1.8rem;overflow-wrap:anywhere}
+/* menu do celular sempre cabe na tela */
+.menu nav{max-height:calc(100vh - 90px);max-height:calc(100dvh - 90px);overflow-y:auto}
+/* matriz de riscos: rola de lado no celular para manter o texto legível */
+.rolagem{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.rolagem a{display:block}
+.so-movel{display:none}
+
+/* conteúdo largo nunca alarga a página */
+.sec__body,.sec__head{min-width:0}
+@media(max-width:860px){.sec>.wrap{grid-template-columns:minmax(0,1fr)}}
+
+/* telas grandes */
+@media(min-width:1500px){html{font-size:106.25%}.wrap{max-width:1320px}}
+@media(min-width:2000px){html{font-size:118%}.wrap{max-width:1560px}}
+
+/* tablets e celulares */
+@media(max-width:760px){
+  .rolagem img{width:900px;max-width:none}
+  .so-movel{display:inline}.so-desk{display:none}
+  .funil div{width:100%}
+}
+@media(max-width:640px){
+  .kpi div{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  :root{--hh:64px}
+  .brand{font-size:1.15rem;gap:9px}
+  .brand img{width:36px;height:36px}
+  .menu summary{padding:8px 14px}
+  .hero{padding-block:44px 52px}
+  .hero h1{font-size:clamp(1.9rem,9vw,2.4rem);hyphens:auto}
+  .hero p.lead{font-size:1.05rem}
+  .hero__acoes .btn,.cta__box .btn{display:block;width:100%;text-align:center}
+  .sec{padding-block:44px}
+  .sec h2{font-size:1.75rem;hyphens:auto}
+  h3{hyphens:auto}
+  .passos>li{grid-template-columns:40px minmax(0,1fr);gap:0 10px;padding:20px 0}
+  .passos>li::before{font-size:2rem}
+  .duo .passos>li::before{font-size:1.7rem}
+  .destaque{padding:18px}
+  .p4 div{padding:24px 16px}
+  .area{padding:24px}
+  .cta__box{border-radius:20px}
+  .fig{padding:10px}
+  .foot{padding-block:36px 24px}
+}
+@media(max-width:340px){
+  .brand span{font-size:1rem}
+  .p4{grid-template-columns:1fr}
+  .p4 div{border-left:0;border-top:1px solid rgba(229,215,196,.16)}
+  .p4 div:first-child{border-top:0}
+}
+
+/* celular deitado (pouca altura) */
+@media(max-height:500px) and (orientation:landscape){
+  :root{--hh:56px}
+  .sec__head{position:static}
+  .hero{padding-block:36px}
+}
+
+/* telas de toque: alvos maiores */
+@media(pointer:coarse){
+  .foot a{display:inline-block;padding-block:6px}
+  .nav a,.menu a{min-height:44px;display:inline-flex;align-items:center}
+}
+
+/* quem prefere menos movimento */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+  .area:hover{transform:none}
+}
