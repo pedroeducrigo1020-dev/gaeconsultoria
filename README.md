@@ -1,6 +1,8 @@
 # Ethos e Terra
 
-Site estático (HTML, com o CSS dentro de cada página; sem JavaScript). Abra `index.html` ou publique a pasta no GitHub Pages.
+Site estático em tema escuro.
 
-index · seguranca-trabalho · marketing · qualidade · rh · ti · contato (.html)
-img/ (logo e imagens da Qualidade)
+index.html · seguranca-trabalho.html · marketing.html · qualidade.html · rh.html · ti.html · contato.html
+css/style.css · js/main.js · img/ (imagens originais, sem recompressão)
+
+Envie TODAS as pastas junto com os .html, mantendo a estrutura.

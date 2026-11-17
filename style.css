@@ -126,3 +126,32 @@ h3 small{font:400 .9rem var(--body);color:var(--ink-soft);margin-left:6px}
 .email{font:400 clamp(1.4rem,3vw,2.2rem) var(--display);word-break:break-all}
 .ferr .fig{aspect-ratio:1;display:grid;place-items:center}
 .ferr .fig img{max-height:100%;object-fit:contain}
+.area--e{grid-column:1/-1;background:var(--cafe);min-height:200px;background:linear-gradient(120deg,var(--kombu),var(--deep))}
+.faq{margin-top:28px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq summary{cursor:pointer;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--moss);font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:10px 0 0;color:var(--ink-soft)}
+.ferr .fig{aspect-ratio:auto;height:clamp(170px,18vw,230px)}.ferr .fig img{max-height:100%;width:auto;max-width:100%}
+
+/* ===== Tema escuro ===== */
+:root{color-scheme:dark;--paper:#1A2216;--areia:#212B1C;--card:#2A3624;--ink:#EDE3D1;--ink-soft:#B8B5A2;--line:rgba(229,215,196,.15);--moss:#A8BF78;--deep:#10170D}
+body{background:var(--paper);color:var(--ink)}
+.top{background:rgba(26,34,22,.94)}
+.brand{color:var(--bone)}
+.nav a:hover{background:var(--card)}
+.nav a[aria-current]{background:var(--moss);color:var(--deep)}
+.btn{background:#5C7034;border-color:#5C7034;color:#fff}.btn:hover{background:#6F8640;border-color:#6F8640}
+.menu a[aria-current]{background:var(--card)}
+.pills li{background:var(--card)}
+.area{border:1px solid rgba(229,215,196,.12)}
+.area--a{background:#2F3D2A}
+.cta__box{background:#2F3D2A;border:1px solid rgba(229,215,196,.12)}
+.foot{border-top:1px solid var(--line)}
+.fig{box-shadow:0 12px 30px -14px rgba(0,0,0,.7)}
+.sec--tint .destaque{background:var(--paper)}
+.hero__fig{box-shadow:0 30px 60px -24px rgba(0,0,0,.8)}
+.area--c{background:#4E6030}
+.funil div{background:linear-gradient(90deg,#3B4A35,#5C7034)}
